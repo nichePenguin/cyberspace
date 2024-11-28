@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px dotted;
+  border-color: #9fdee0;
+}
+
+.code_note {
+  position: absolute;
+}
+
+.code {
+  position: relative;
+  border: 4px outset;
+  padding: 12px;
+  padding-left: 16px;
+  padding-right: 18px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #FFFCF2;
+}
+

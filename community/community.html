@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <title>Community Section</title>
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/meivm_encoder.css">
+    <link rel="stylesheet" href="css/meivm_details.css">
+    <link rel="stylesheet" href="css/lcolonq_braillegen.css">
+    <script type="module" src="src/main.js" > </script>"
+  </head>
+  <body onload="document.body.style.visibility=`visible`;"> <!-- FOUC fix -->
+    <script>document.body.style.visibility=`hidden`;</script>
+    <div id="content-container">
+    <div id="wand-content">
+      <div class="wand-anchor"></div>
+    </div>
+    <br>
+    <div id="content">
+    </div>
+    </div>
+    <img id="miku-js" src="res/miku_js.png"></img>
+    <div id="left-panel">
+      <div class="panel-title">COMMUNITY SECTION ☺︎</div>
+      <a href="../index.html"><button class="panel-entry" type="button">&#60;&#60; BACK</button></a>
+      <div class="panel-separator"></div>
+      <div class="panel-entry-container">
+        <button class="panel-entry" who="Meisaka" type="button">
+          <img class="profile-pic" src="res/meisaka.png"></img>
+          <div class="panel-entry-text"> Meisaka </div>
+        </button>
+        <div class="button-peek" key="meivm-encoder"><img src="res/wave_vm.png"></img>
+          <span class="peek-text" text="Wave CPU Sprite Renderer: Tool"></span>
+        </div>
+        <div class="button-peek" key="meivm-details"><img src="res/wave_vm_how.png"></img>
+          <span class="peek-text" text="Wave CPU Sprite Renderer: Source"></span>
+        </div>
+      </div>
+      <div class="panel-entry-container">
+        <button class="panel-entry" who="LCOLONQ" type="button">
+          <img class="profile-pic" src="res/lcolonq.png"></img>
+          <div class="panel-entry-text"> LCOLONQ </div>
+        </button>
+        <div class="button-peek" key="lcolonq-braillegen"><img src="res/lcolonq_braille.png"></img>
+          <span class="peek-text" text="Extended Braillegen"></span>
+        </div>
+      </div>
+      <div class="panel-separator"></div>
+    </div>
+
+    <!-- TEMPLATES -->
+
+    <div id="templates">
+      <template id="lcolonq-braillegen-template">
+      <div id="lcolonq-braillegen" >
+        <h1>Extended Braillegen</h1>
+        <hr>
+        <h2 style="text-align:center"> Elite hairstylist edition </h2>
+        <span style="line-height:0;font-size:13px">
+          ⠀⠀⠀⠀⠀⠀⢀⣀⣀⣤⣤⣤⣖⣶⣲⣗⣮⢾⢾⣲⢽⡻⣷⣽⢿⣽⡮⣿⢿⡼⡷⡶⣶⢦⣦⣤⣤⣠⣔⡬⡢⣒⠴⣄⢀⠀⠀⠀⠀⠀⠀⠄⠆⡑⡰⠁⠀<br>
+          ⠀⢀⠠⡔⢖⢝⢜⠺⣎⢎⢚⠪⡚⡚⠞⠪⠪⠏⢗⡝⢗⠯⡳⣝⢟⢮⡻⢽⠽⠽⡽⢝⢞⢝⢞⢺⡪⡳⡳⡫⣟⢵⢻⢮⢻⢢⢦⢲⠲⡫⠪⠈⢔⠨⠂⠀⠀<br>
+          ⠀⠡⠑⠁⠡⠁⠑⠐⢈⠣⠊⠘⡐⠔⠡⠈⠄⠈⠀⠄⠂⠐⠈⠨⠈⠂⠅⠅⠌⠂⠂⠐⠀⠄⠂⠀⠁⠁⠈⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠌⡐⠱⡐⡀⠀<br>
+          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠁⠀⠁⠂⠂⠄⠄⠄⠀⡀⡀⡀⡀⠄⠂⠀⢀⠀⠀⠠⢠⠠⡠⠀⠀⠂⠀⠀⠀⠠⠈⠈⠒⠐⠀⠀⠀⠀⠀⠀⠀⠀⠁⠈⠂⠀<br>
+          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠈⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+        </span>
+        <hr>
+        <h2 style="color:#CC0000;text-align:center">WIP DUE TO API BEING OPENED</h2>
+	<h3 style="text-align:center">Cool patterns by ctrl_o and others <a href="https://pub.colonq.computer/~ctrl/cgi-bin/gomoco">are here</a></h3>
+        <hr>
+	<!--div>
+        <div>
+          <button id="browse" onclick="browse()"type="button">Browse...</button>
+          <input id="file-fake" readonly type="text" name="file"/>
+          <input id="file" type="file" name="file"/>
+          <br>
+          <label>Or paste the image anywhere on the page!</label>
+        </div>
+        <hr>
+        <div>
+          <label>Greyscale conversion:</label>
+          <select name="conversion" id="lqbr_conversion">
+            <option value="luminance">Luminance</option>
+            <option value="average">Average</option>
+            <option value="lightness">Lightness</option>
+            <option value="desaturate">Desaturate</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+          </select>
+          <input type="checkbox" id="lqbr_dithering" name="dithering"></input>
+          <label>Dithering</label>
+        </div>
+        <div>
+        </div>
+        <div>
+          <label>Horisontal tiling:</label>
+          <select name="lqbr_tiling">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+          </select>
+          <input type="checkbox" id="lqbr_flip" name="flip"></input>
+          <label>Flip</label>
+        </div>
+        <div>
+          <label>Verticality:</label><br>
+          <input type="radio" name="lqbr_scale" value="resize"></input><label>Resize</label>
+          <input type="radio" name="lqbr_scale" value="crop"></input><label>Crop</label>
+          <input type="range" id="lqbr_verticality" name="verticality"></input>
+        </div>
+       <div>
+          <label>Threshold:</label><br>
+          <input id="lqbr_threshold" name="threshold" type="range"></input>
+        </div>
+        <div id="images">
+          <div class="image-container">
+            <span>Tile Preview</span>
+            <textarea readonly style="width:100%;height:100%"></textarea>
+          </div>
+        </div>
+        <div id="images">
+          <div class="image-container">
+        
+            <span>The Man Preview</span>
+            <img id="image-input" src="res/wait.gif"></img>
+          </div>
+        </div>
+	<div-->
+	<div id="images">
+          <div class="image-container">
+            <img id="image-input" src="res/wait.gif"></img>
+          </div>
+        </div>
+
+      </div>
+    </template>
+    <template id="meivm-encoder-template">
+      <div id="meivm-encoder">
+        <h1>Wave CPU Sprite Renderer Image Encoder</h1>
+        <hr>
+        <span class="notice">Remember to <b>!vm halt</b> after drawing to allow others to take the slot!</span>
+        <br>
+        <span>(The programm will continue to redraw the image to battle possible memory cleaners)</span>
+        <hr>
+        <div>
+          <button id="browse" type="button">Browse...</button>
+          <input id="file-fake" readonly type="text" name="file"/>
+          <input id="file" type="file" name="file"/>
+          </br>
+          <label>Or paste the image anywhere on the page!</label>
+        </div>
+        <hr>
+        <div id="slot-input">
+          <span>Where to draw the sprite - from 1 to 8</span>
+          </br>
+          <label> Slot:</label>
+          <input type="number" id="slot" name="slot" min=1 max=8 value="1"/>
+          <br/>
+        </div>
+        <div>
+          <span>Replace color around the borders with black (transparent)</span>
+          </br>
+          <input type="checkbox" id="black-bkg" name="black-bkg"/>
+          <label> Transparent background </label>
+        </div>
+        <div>
+          <button type="button" id="encode" disabled> Encode </button>
+          </br>
+          </br>
+          <span>Note: palette reduction is not deterministic, try it a couple of times</span>
+        </div>
+        <div id="error">
+          <label>Error: </label>
+          </br>
+          <span id="error-message"></span>
+        </div>
+        <div id="images">
+          <div id="input">
+            <div class="image-container">
+              <span>Input</span>
+              <img id="image-input" src="res/wait.gif"></img>
+            </div>
+          </div>
+          <div id="output">
+            <div class="image-container">
+              <span>Output</span>
+              <img id="image-output" src="res/wait.gif"></img>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label>Initial input: </label>
+          <br>
+          <span>This is your first command - it initializes constant registers, image data and code.</span>
+          <br>
+          <div class="wand-anchor"></div>
+          <br>
+          <textarea readonly id="initial-text" name="initial"></textarea>
+          <br>
+          <div>
+            <button id="initial-copy" type="button"> Copy </button>
+          </div>
+          </br>
+        </div>
+        <div>
+          <label>Consecutive input: </label>
+          </br>
+          <span>After you've initialized your thread with the first command, any updates can be made with a shorter command, loading only the palette, slot address and image data:</span>
+          </br>
+          <div class="wand-anchor"></div>
+          </br>
+          <textarea readonly id="secondary-text" name="secondary"></textarea>
+          </br>
+          <div>
+          <button id="secondary-copy" type="button"> Copy </button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="meivm-details-template"><div id="meivm-details">
+      <h1>Wave CPU Image Renderer: Source</h1>
+      <hr>
+      <h3>Wave Vector CPU SPEC:
+        <a href="https://github.com/Meisaka/MeiVM2/blob/main/vm.txt">github</a>
+      </h3>
+      <hr>
+      <div class="code">
+      <table>
+        <tr><td>#c0 0000 A7F4 5ECB 0600 </td><td>- colormap</td></tr>
+        <tr><td>#c1 0838 0840 08b8 08c0 </td><td>- starting address (0800 0808 0880 0888 left)</td></tr>
+        <tr><td>#c2 0003 0003 0003 0003 </td><td>- colormap mask (0b11)</td></tr>
+        <tr><td>#c3 0100 0100 0100 0100 </td><td>- line address increment (256, two lines of 128x64)</td></tr>
+        <tr><td>#c4 0001 0000 0000 0000 </td><td>- 1 | 0 | 0 | 0 (x increment)</td></tr>
+        <tr><td>#c5 0041 0000 0000 0000 </td><td>- image data start </td></tr>
+        <tr><td>#c6 0064 0000 0000 0000 </td><td>- program start </td></tr>
+        <tr><td># === header code ===</td></tr>
+        <tr><td>mov c6.x, r7.x </td><td># r1 - program start</td></tr>
+        <tr><td><br></td></tr>
+        <tr><td># === main code ===</td></tr>
+        <tr><td># == main loop start ==</td></tr>
+        <tr><td>swizzle r7.xyzx </td><td># :W restart</td></tr>
+        <tr><td>mov c1.xyzw, r2.xyzw </td><td># r2 - current draw line addr</td></tr>
+        <tr><td>mov c5.xyzw, r3.xyzw </td><td># r3 - current image data addr</td></tr>
+        <tr><td>lsr.w r4, 15 </td><td># r4 - clear line counter </td></tr>
+        <tr><td># == line loop start ==</td></tr>
+        <tr><td>swizzle r7.xyxw </td><td># :Z lines</td></tr>
+        <tr><td>load [r3.x]+, r0.xyzw </td><td># r0 - image data addres, increment for the next iteration</td></tr>
+        <tr><td>mov r2.xyzw, r1.xyzw </td><td># r1 - current pixel target address</td></tr>
+        <tr><td># == pixel loop start ==</td></tr>
+        <tr><td>swizzle r7.xxzw </td><td># :Y pixels</td></tr>
+        <tr><td>mov r0.xyzw, r5.xyzw </td><td># r5 - pixel data</td></tr>
+        <tr><td>and c7, r5 </td><td># apply mask - get color indexes</td></tr>
+        <tr><td>load [r5.xyzw], r6.xyzw </td><td># r6 - color data [freeing r5]</td></tr>
+        <tr><td>store r6.xyzw, [r1.xyzw]+&nbsp</td><td># draw and increment pixel target address [freeing r6]</td></tr>
+        <tr><td>rol.w r0, 2 </td><td># rotate shift image data to the next pixel</td></tr>
+        <tr><td># linebreak test</td></tr>
+        <tr><td>mov r1.xyzw, r6.xyzw </td><td># r6 - test result</td></tr>
+        <tr><td>subrev.w r6, r2 </td><td># subtract line start address from current pixel address</td></tr>
+        <tr><td>lsr.w r6, 3 </td><td># right-shift difference (1000 -> 0001, less -> 0000)</td></tr>
+        <tr><td>mov c4.yzw, r6.yzw </td><td># zero-out yzw, x holds either 1 or 0</td></tr>
+        <tr><td>add.w r6, r7 </td><td># jump over if test is true [freeing r6]</td></tr>
+        <tr><td>swizzle r7.yyzw </td><td># jump to :Y => next pixel</td></tr>
+        <tr><td># == pixel loop end ==</td></tr>
+        <tr><td>add.w c3, r2 </td><td># increment line addr </td></tr>
+        <tr><td>add.w c4, r4 </td><td># increment line counter </td></tr>
+        <tr><td># restart test</td></tr>
+        <tr><td>mov r4.xyzw, r6.xyzw </td><td># r6 - test result</td></tr>
+        <tr><td>lsr.w r6, 3 </td><td># right-shift counter (1000 -> 0001, less -> 0000)</td></tr>
+        <tr><td>add.w r6, r7 </td><td># jump over if test is true [freeing r6]</td></tr>
+        <tr><td>swizzle r7.zyzw </td><td># jump to :Z => next line</td></tr>
+        <tr><td># == line loop end ==</td></tr>
+        <tr><td>swizzle r7.wyzw</td><td># jump to :W => restart</td></tr>
+        <tr><td># == main loop end</td></tr>
+      </table>
+      <br>
+      <hr>
+      <div style="text-align:left"> <img style="vertical-align: bottom;height:1rem;width:1rem;margin-bottom:0.18rem" src="res/icon.png"></img><i> NP COMPUTRONICS AUTUMN CAMP 1986 </i> </div>
+    </div>
+    <div class="code">
+      <table>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+        <tr><td><br></td></tr>
+      </table>
+      <br>
+      <hr>
+      <div style="text-align:right"> <i> NP COMPUTRONICS AUTUMN CAMP 1986 </i> <img style="vertical-align: bottom;height:1rem;width:1rem;margin-bottom:0.18rem" src="res/icon.png"></img></div>
+
+        <div style="left:4%;top:2%;transform:rotate(-1deg)"class="code_note">
+          colors: 00 01 10 11 <s>100 101 110 111</s>
+        </div>
+        <div style="left:48%;top:1.2%;transform:rotate(-1.8deg);opacity:0.5"class="code_note">
+          8x16 4bit ?<br>
+          32x16 1bit ?<br>
+          3bit ??
+        </div>
+
+        <div style="left:4%;top:4%;transform:rotate(-0.2deg)"class="code_note">
+          2bit pixel: 16 × 16 = 256
+        </div>
+        <div style="left:28%;top:5.5%;transform:rotate(0.4deg)"class="code_note">
+          × 2 / 8 = 512 bit
+        </div>
+        <div style="left:39%;top:6.8%;transform:rotate(0.8deg)"class="code_note">
+          64 bytes
+        </div>
+
+        <div style="background: no-repeat url('res/mrgreen.png');background-size: 100% 100%;display:block;opacity:0.75;line-height=6px;font-size:10px;left:4%;top:8%;"class="code_note"><b>
+          00 00 00 00 00 01 01 01 01 01 00 00 00 00 00 00<br>
+          00 00 00 01 01 10 10 10 10 10 01 01 00 00 00 00<br>
+          00 00 01 10 10 10 10 10 10 10 10 10 01 00 00 00<br>
+          00 01 10 10 10 01 01 10 01 01 10 10 10 01 00 00<br>
+          00 01 10 10 01 10 10 01 10 10 01 10 10 01 00 00<br>
+          01 10 10 10 01 10 10 01 10 10 01 10 10 10 01 00<br>
+          01 10 10 10 10 10 10 10 10 10 10 10 10 10 01 00<br>
+          01 10 01 01 01 01 01 01 01 01 01 01 01 10 01 00<br>
+          01 10 01 11 11 11 11 11 11 11 11 11 01 10 01 00<br>
+          01 10 01 11 00 11 00 11 00 11 00 11 01 10 01 00<br>
+          00 01 10 01 00 11 00 11 00 11 00 01 10 01 00 00<br>
+          00 01 10 10 01 01 00 11 00 01 01 10 10 01 00 00<br>
+          00 00 01 10 10 10 01 01 01 10 10 10 01 00 00 00<br>
+          00 00 00 01 01 10 10 10 10 10 10 01 00 00 00 00<br>
+          00 00 00 00 00 01 01 01 01 01 00 00 00 00 00 00<br>
+          00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00<br></b>
+        </div>
+
+        <div style="left:52%;top:7%;"class="code_note">
+          memory:<br><s>64 bytes registers</s><br> 128 bytes private RAM
+        </div>
+        <div style="left:67.5%;top:4.5%;transform:rotate(-12deg)"class="code_note">
+          too awkward, -8 registers
+        </div>
+        <div style="left:64.7%;top:7%;transform:rotate(-38deg)"class="code_note">
+          <-
+        </div>
+        <div style="left:63%;top:13.1%;transform:rotate(5deg)"class="code_note">
+          - code: ?? bytes?
+        </div>
+        <div style="left:60%;top:14.7%;transform:rotate(5deg);text-align:center"class="code_note">
+        <i style="opacity:0.8;font-size:14px;">
+          UPD: 26 words +1 word header <br> free: 37 words = 74 bytes
+        </i></div>
+
+        <div style="left:38.4%;top:21.3%;font-size:32px" class="code_note">
+          }
+        </div>
+        <div style="left:41%;top:21.8%" class="code_note">
+          2 rows = 1 register = 1 load instruction
+        </div>
+
+        <div style="left:2%;top:25%;font-size:20px" class="code_note">
+          Uhhhh are we encoding it like that too?
+          <i style="opacity:0.5"><br>
+            Nevermind, store increments words and not register anyway
+        </i></div>
+        <div style="left:83%;top:25%;font-size:20px;transform: rotate(30deg)" class="code_note">
+          <i style="opacity:0.3"><br>
+            What???
+        </i></div>
+
+        <div style="left:2%;top:32%" class="code_note">
+          Encode sequentially, store scatter
+        </div>
+        <div style="font-size:32px;left:43.5%;top:31.5%" class="code_note">
+          OR
+        </div>
+        <div style="left:52%;top:32%" class="code_note">
+          Store sequentially, encode scattered
+        </div>
+        <div style="transform:rotate(87.5deg);font-size:32px;left:37.1%;top:43.6%" class="code_note">
+          ____________
+        </div>
+
+        <div style="left:4%;top:35%;font-size:18px" class="code_note">
+          2 loops - 8 stores × 8 lines
+        </div>
+        <div style="color:#4F4F4F;left:21%;top:39%;transform: rotate(15deg)" class="code_note">
+          Cheap condition checks?
+        </div>
+        <div style="text-align:center;left:3%;top:40%" class="code_note">
+          <b>0..7</b> = 0b0xxx, <b>8</b> = 0b1000<br>
+          ===shift 3===> <br>
+          &nbsp&nbsp &nbsp = 0b0001 &nbsp&nbsp = 0b0000
+        </div>
+        <div style="left:2%;top:46%;transform:rotate(-1deg)" class="code_note">
+          innermost loop - store increments by 1 <br>
+          each pixel address ^ just what we need
+        </div>
+        <div style="opacity:0.75;left:2%;top:50%" class="code_note">
+          target addr (start) 0,0 0,8 1,0 1,8
+        </div>
+        <div style="opacity:0.5;font-size:16px;left:21.8%;top:52%" class="code_note">
+          0800 0808 0880 0888
+        </div>
+
+        <div style="left:55%;top:35%;font-size:18px" class="code_note">
+          1? loop - 2 stores × 16 rows
+        </div>
+        <div style="font-size:20px;left:78%;top:36.6%" class="code_note">
+          OR
+        </div>
+        <div style="left:67.5%;top:38%;font-size:18px" class="code_note">
+          16 stores × 2 cols
+        </div>
+        <div style="left:62%;top:41.3%" class="code_note">
+          store writes 4 pixels<br>increments address by 1
+        </div>
+        <div style="left:52%;top:45.3%" class="code_note">
+          4 instructions? <br>x2 stores with x2 address increments<br>
+        </div>
+        <div style="left:55%;top:39.5%;font-size:24px;color:#4f4f4f;transform:rotate(-12.5deg)" class="code_note">
+          Eek!
+        </div>
+
+        <div style="color:#7F4F4F;left:56%;top:50.6%;transform:rotate(2deg);border: 2px solid #7F4F4F;padding:4px" class="code_note">
+          payoff unclear, less fun <br> + already did the other thing<br>
+        </div>
+
+        <div style="font-size:28px;left:12%;top:53.5%;transform:rotate(2deg)" class="code_note">
+          Decoding
+        </div>
+        <div style="left:3.5%;top:57.5%;" class="code_note">
+          00 00 01 10 10 10 10 10 &nbsp 10 10 10 10 01 00 00 00<br>
+          00 01 10 10 10 01 01 11 &nbsp 01 01 10 10 10 01 00 10<br>
+        </div>
+        <div style="font-size:28px;left:59%;top:59.8%;transform:rotate(8deg)" class="code_note">
+          <==>
+        </div>
+        <div style="left:68.5%;top:61.3%;" class="code_note">
+          06AA AA40 1A97 5A92
+        </div>
+        <div style="color:#4F4F4F;left:64.5%;top:63.3%;" class="code_note">
+          (4 words, 1 SIMD register)
+        </div>
+        <div style="font-size:28px;left:15%;top:60.8%;transform:rotate(85deg)" class="code_note">
+          =>
+        </div>
+        <div style="color:#3F3F3F;left:20%;top:61.6%" class="code_note">
+          AND 0b0011 (each word)
+        </div>
+        <div style="left:3.5%;top:63.8%" class="code_note">
+          <span style="opacity:0.2">00 00 00 00 00 00 00</span> 10 &nbsp <span style="opacity:0.2">00 00 00 00 00 00 00</span> 00<br>
+          <span style="opacity:0.2">00 00 00 00 00 00 00</span> 11 &nbsp <span style="opacity:0.2">00 00 00 00 00 00 00</span> 10<br>
+        </div>
+        <div style="font-size:15px;left:60.5%;top:66%;transform:rotate(-1deg)" class="code_note">
+          shift by 2 for the next pixel!
+        </div>
+        <div style="color:#3F3F3F;left:4%;top:68%" class="code_note">
+          &nbsp &nbsp 0002 0000 0003 0002<br> - if we keep colors at 0x000, those are the addresses to load from!
+        </div>
+
+        <div style="opacity:0.6;font-size:22px;left:76%;top:70%;transform:rotate(-30deg)" class="code_note">
+          to where?
+        </div>
+        <div style="opacity:0.45;text-align:center;font-size:16px;left:75%;top:72.5%;transform:rotate(-18deg)" class="code_note">
+          idk a constant <br>plus (128-8) for next line
+        </div>
+        <div style="text-align:center;opacity:0.75;font-size:18px;left:60%;top:75.5%;transform:rotate(18deg)" class="code_note">
+          next line?
+        </div>
+        <div style="text-align:center;opacity:0.6;font-size:16px;left:63%;top:83.5%;transform:rotate(3deg)" class="code_note">
+          <s>count to 8</s>, shift by 3<br>add that to instruction pointer
+        </div>
+        <div style="text-align:center;opacity:0.45;font-size:15px;left:63%;top:87.5%;transform:rotate(3deg)" class="code_note">
+          (actually count to 8 for restart)
+        </div>
+        <div style="text-align:center;opacity:0.75;font-size:14px;left:46.5%;top:79.2%;transform:rotate(-2deg)" class="code_note">
+          counter for free:<br>
+          subtract pixel address<br> from line start
+        </div>
+        <div style="opacity:0.75;font-size:14px;left:65.2%;top:82.2%;transform:rotate(-160deg)" class="code_note">
+          ->
+        </div>
+
+        <div style="text-align:center;left:2%;top:75.9%;" class="code_note">
+          NOTE: remember loop start by swizzling ri<br>
+          <span style="opacity:0.8">(only x is the pointer, yzw is free)</span>
+        </div>
+        <div style="text-align:center;font-size:18px;left:2%;top:86%;" class="code_note">
+          TODO: move things around after it'ss done<br>
+          <span style="opacity:0.5;font-size:14px">(image and slot first to reduce message size + image header)</span><br>
+          <s><span style="opacity:0.8">BUG: x word of next registers are overriden <br>with zeroes on !write/!code, add offsets</span><br>
+            <span style="font-size:14px;opacity:0.5">(c2 is all zeroes so it's not overriden, move mask to c7)</span></s>
+        </div>
+        <div style="font-size:22px;left:52%;top:90.9%;transform: rotate(30deg)" class="code_note">
+          FIXED!
+        </div>
+
+      </div>
+      <h3 style="text-align:center">
+        Compiled with an <a href="https://github.com/asquared31415/wavevm_assembler">assembler</a> made by <a href="https://pub.colonq.computer/~asquared31415/">asquared31415</a> :3
+      </h3>
+      <h3 style="text-align:center">
+        Raw source available at: <a href="source.txt">source.txt</a>
+      </h3>
+    </div></template>
+  </div>
+</body>
+</html>

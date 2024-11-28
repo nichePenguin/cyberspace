@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "IBMVGA8";
+  src: url("../res/ibm_vga8.woff2") format('woff2');
+}
+body {
+  margin: 35px;
+  background-color: #00796f;
+}
+#miku-js {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  height: 45vmin;
+  width: auto;
+}
+.panel-title {
+  background-color: #070079;
+  border: 4px outset;
+  text-align: center;
+  font-size: 26px
+}
+.panel-separator {
+  margin: 6px;
+  border: 4px outset;
+}
+.profile-pic {
+  width: 70px;
+  border: 4px outset;
+  border-color: #995500;
+  height: 70px;
+  margin: 4px;
+  z-index: 10;
+}
+.panel-entry-container {
+  position: relative;
+}
+.panel-entry {
+  margin: 10px;
+  background-color: #e0e0e0;
+}
+button {
+  width: 130px;
+  border: 4px outset;
+  font-family: "IBMVGA8";
+  font-size: 20px;
+}
+button:active:hover:enabled {
+  background-color: #b0b0b0;
+}
+button:hover:enabled {
+  border: 4px inset;
+  background-color: #d0d0d0;
+  cursor: pointer;
+}
+
+.panel-entry-text {
+  font-size: 24px;
+  color: #000000;
+}
+
+#left-panel {
+  padding: 4px;
+  border: 4px outset;
+  border-color: #999999;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "IBMVGA8";
+  width: 150px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  background-color: #c4c4c4;
+}
+
+#content-container {
+  display: flex;
+  justify-content: center;
+}
+
+#content > * {
+  margin: 10px;
+}
+
+#content {
+  background-color: #c4c4c4;
+  font-family: "IBMVGA8";
+  color: #000000;
+  border: 4px outset;
+  overflow-x: hidden;
+  margin-left: 164px;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+#wand-content {
+  justify-content: left;
+  position: absolute;
+  margin-left: 164px;
+  width: 0px;
+}
+
+.wand-anchor {
+  display: inline-block;
+  position: relative;
+  height: 0px;
+}
+
+.wand {
+  display: inline-block;
+  position: absolute;
+  background-image: url("../res/wand_64.png");
+  width: 64px;
+  height: 64px;
+  opacity: 0;
+  z-index: 999;
+  transition: left 0.62s ease-out, top 0.62s ease-out, opacity 0.4s ease-out;
+  animation: wand_anim 1.2s steps(10) forwards;
+}
+
+@keyframes wand_anim {
+  100% { background-position: -640px; }
+}
+
+.peek-text {
+  color: #000000;
+  white-space: nowrap;
+}
+
+.button-peek {
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 4px outset;
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: -1;
+  transition: left 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.button-peek:hover {
+  border: 4px inset;
+  background-color: #d0d0d0;
+}
+
+h1 {
+  padding: 10px;
+  background-color: #070079;
+  border: 4px outset;
+  color: #FFFFFF;
+}
+
+img {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+#content > div > * {
+  margin: 10px;
+}
+
+#content > div > * > label {
+  font-size: 20px;
+}
+
+#content > div > * > span {
+  display:inline-block;
+  max-width: 700px;
+  color: #454545;
+}
+
+#content > div > * > textarea {
+  position: relative;
+  width: 90%;
+  height: 120px;
+}
