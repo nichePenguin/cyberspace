@@ -58,7 +58,7 @@ function encode() {
     return
   }
   document.getElementById("image-output").src = "res/wait.gif";
-  var data = JSON.stringify({
+  const data = JSON.stringify({
     "image": INPUT,
     "slot": Number(document.getElementById("slot").value) - 1,
     "black_background": document.getElementById("black-bkg").checked,
@@ -93,33 +93,15 @@ function set_error(errorMessage){
 function load(json) {
   if (!json) return;
   document.getElementById("image-output").src = "data:image/png;base64," + json.image;
-  const initial =
-    "!vm write "
-    + json.palette + " "
-    + json.slot_address + " "
-    + REGISTERS
-    + " ! code "
-    + HEADER + " "
-    + json.encoded + " "
-    + OFFSET + " "
-    + PROGRAM
-    + " ! run";
-
-  const secondary =
-    "!vm write "
-    + json.palette + " "
-    + json.slot_address
-    + " ! code "
-    + HEADER + " "
-    + json.encoded
-    + " ! restart";
+  const initial = `!vm write ${json.palette} ${json.slot_address} ${REGISTERS} ! code ${HEADER} ${json.encoded} ${PROGRAM} ! run`;
+  const secondary = `!vm write ${json.palette} ${json.slot_address} ! code ${HEADER} ${json.encoded} ! restart`;
 
   document.getElementById("initial-text").innerHTML = initial;
   document.getElementById("secondary-text").innerHTML = secondary;
 }
 
 function copy(id) {
-  var textarea = document.getElementById(id); 
+  const textarea = document.getElementById(id); 
   wand(textarea.parentElement, 0, 0);
   setTimeout(() => {
     textarea.select();

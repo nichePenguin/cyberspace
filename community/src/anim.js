@@ -1,6 +1,6 @@
 // Wand
 function wand(anchor_container, xoffset, yoffset) {
-  var wand = document.createElement("div");
+  const wand = document.createElement("div");
   wand.className = "wand";
   wand.style.top = -32 + yoffset + "px";
   wand.style.left = 64 + xoffset + "px";
@@ -29,7 +29,7 @@ function typingAnim(element, direction) {
     element.style['margin-right'] = "4px";
   }
   const text = element.attributes["text"].nodeValue;
-  var state = null;
+  let state = null;
   if(!('typingAnimState' in element)) {
     state = {
       direction: direction,
@@ -49,7 +49,7 @@ function typingAnim(element, direction) {
 }
 
 function typingAnimStep(element) {
-  var state = element.typingAnimState;
+  let state = element.typingAnimState;
   if (state.direction == 0) return;
   if ((state.direction == 1 && state.current_index == state.text.length)
     || (state.direction == -1 && state.current_index == 0)) {

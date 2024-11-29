@@ -1,6 +1,8 @@
 import { wand } from './anim.js';
 import * as meivmEncoder from "./subpages/meivm_encoder.js";
 import * as meivmDetails from './subpages/meivm_details.js';
+import * as lcolonqBraillegen from './subpages/lcolonq_braillegen.js';
+
 let SUBPAGES = {
   "meivm-encoder": meivmEncoder,
   "meivm-details": meivmDetails,
@@ -21,9 +23,9 @@ function loadContentByKey(key) {
   window.location.hash = "#" + key;
   wand(document.getElementById("wand-content"), 0, 0);
 
-  let contentElement = document.getElementById("content");
+  const contentElement = document.getElementById("content");
   contentElement.style["transform"] = "scaleY(0)";
-  let data = document.querySelector("#" + key + "-template").innerHTML;
+  const data = document.querySelector("#" + key + "-template").innerHTML;
   
   if (!data) {
     console.error("No template load for key \"" + key + "\"");
