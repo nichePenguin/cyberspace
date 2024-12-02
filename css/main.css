@@ -193,7 +193,7 @@ body {
   66% { background-position: 0 128px }
 }
 
-.node_square {
+.button-node-square {
   display: inline-block;
   position: absolute;
   top: 50%;
