@@ -11,10 +11,20 @@ function init() {
 //  document.getElementById('full').addEventListener('click', handleModeSelect);
 //  document.getElementById('tiling').addEventListener('click', handleModeSelect);
   document.getElementById('threshold').addEventListener('change', redraw);
-  document.getElementById('dither-type').addEventListener('change', redraw);
+  document.getElementById('dither-type').addEventListener('change', handleDitherChange);
   document.getElementById('grayscale').addEventListener('change', redraw);
   document.getElementById('invert').addEventListener('click', redraw);
   CANVAS = document.getElementById('preview');
+}
+
+function handleDitherChange(event) {
+  let note = document.getElementById('dither-threshold-note');
+  if (event.currentTarget.value == "none") {
+    note.style.display = 'none' 
+  } else {
+    note.style.display = 'inline';
+  }
+  redraw();
 }
 
 function uninit() {

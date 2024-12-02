@@ -14,7 +14,7 @@ function monochromize(canvas, outputCanvas, grayscale, threshold, invert) {
       const pixel = imgUtil.getPixel(data, x, y, canvas.width);
       const newPixel = imgUtil.threshold(pixel, grayscale, threshold);
       for (let i = 0; i < 4; i++){
-        const value = newPixel[i];
+        let value = newPixel[i];
         if (i != 3 && invert) {
           value = 255 - value;
         }

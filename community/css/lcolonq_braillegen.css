@@ -28,3 +28,7 @@
 #threshold {
   width: 320px;
 }
+#content > div > * > #dither-threshold-note {
+  font-size: 14px;
+  display: none;
+}
