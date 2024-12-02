@@ -172,10 +172,6 @@ img {
   display:inline-block;
   max-width: 700px;
   color: #454545;
+  font-size: 16px;
 }
 
-#content > div > * > textarea {
-  position: relative;
-  width: 90%;
-  height: 120px;
-}

@@ -1,3 +1,5 @@
+import * as imgUtil from "./img_utils.js";
+
 /// type = ["floyd-steinberg", "atkinson", "jarvis-judice-ninke"];
 /// threshold = 0..256
 /// grayscale = function(pixel) -> u8 where pixel = [u8; 3]
@@ -15,12 +17,39 @@
 //- - # 7 5
 //3 5 7 5 3
 //1 3 5 3 1
+function quantize(pixel, grayscale, threshold) {
+  const result = imgUtil.threshold(pixel, grayscale, threshold);
+  const error = [...pixel].map((v) => v - result[0]);
+  // ignore alpha
+  error[3] = 0;
+  return [result, error];
+}
 
-function dither(canvas, threshold, grayscale, type) {
+function addError(data, x, y, width, height, error) {
+  if (x < 0 || x >= width || y < 0 || y >= height) {
+    return;
+  }
+  for (let i = 0; i < 4; i++) {
+    data[imgUtil.pixelIndex(x, y, width)+i] += error[i];
+  }
+}
+
+function diffuseError(data, matrix, denominator, x, y, width, height, error) {
+  const xOffset = matrix[0].filter(x => x == null).length - 1;
+  for (const [dy, row] of matrix.entries()) {
+    for (const [dx, numerator] of row.entries()) {
+      if (numerator == null) continue;
+      const weightedError = error.map(x => x * numerator / denominator);
+      addError(data, x + dx - xOffset, y + dy, width, height, weightedError)
+    }
+  }
+}
+
+function dither(canvas, outputCanvas, threshold, grayscale, type, invert) {
   let diffusionMatrix = null;
   let diffusionDenominator = null;
   switch (type) {
-    case 'floys-steinberg':
+    case 'floyd-steinberg':
       diffusionDenominator = 16;
       diffusionMatrix = [
         [null, null, 7],
@@ -48,55 +77,30 @@ function dither(canvas, threshold, grayscale, type) {
       return null;
   }
 
-  const data = new Uint8ClampedArray(
+  const data = [...new Uint8ClampedArray(
     canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height).data
-  );
-
-  function quantize(pixel, grayscale, threshold) {
-    const value = grayscale(pixel.slice(0, 3)) > threshold ? 255 : 0;
-    const error = pixel.map((v) => v - value);
-    const result = new Uint8Clampedarray(4).fill(value);
-    // ignore alpha
-    error[3] = 0;
-    result[3] = 255;
-    return (result, error);
-  }
-
-  function pixelIndex(x, y) {
-    return (x + y * canvas.width) * 4;
-  }
-
-  function addError(data, x, y, error) {
-    if (x < 0 || x >= canvas.width || y < 0 || y >= canvas.height) {
-      return;
-    }
-    for (let i = 0; i < 4; i++) {
-      data[pixelIndex(x, y) + i] = error[i];
-    }
-  }
-
-  function diffuseError(data, matrix, denominator, x, y, error) {
-    const xOffset = matrix[0].filter(x => x == null).length;
-    for (const [dy, row] in matrix.entries()) {
-      for (const [dx, numerator] in row.entries()) {
-        const weightedError = error.map(x => x * numerator / denominator);
-        console.log(weightedError);
-        addError(data, x + dx - xOffset, y + dy, weightedError)
-      }
-    }
-  }
-
+  )];
+ 
+  const output = new Uint8ClampedArray(canvas.width * canvas.height * 4);
   for (let y = 0; y < canvas.height; y++){
     for (let x = 0; x < canvas.width; x++) {
-      const index = pixelIndex(x,y);
-      const pixel = data.slice(index, 4);
+      const pixel = imgUtil.getPixel(data, x, y, canvas.width); 
       const [newPixel, error] = quantize(pixel, grayscale, threshold);
-      for (let i = 0; i <  4; i++){
-        data[index + i] = newPixel[i];
+      diffuseError(data, diffusionMatrix, diffusionDenominator, x, y, canvas.width, canvas.height, error);
+      for (let i = 0; i < 4; i++){
+        let value = newPixel[i];
+        if (i != 3 && invert) {
+          value = 255 - value;
+        }
+        output[imgUtil.pixelIndex(x, y, canvas.width) + i] = value;
       }
-      diffuseError(data, diffusionMatrix, diffusionDenominator, x, y, error);
     }
   }
+
+  let newData = new ImageData(output, canvas.width, canvas.height);
+  outputCanvas.width = canvas.width;
+  outputCanvas.height = canvas.height;
+  outputCanvas.getContext("2d").putImageData(newData, 0, 0);
 }
 
 export { dither };

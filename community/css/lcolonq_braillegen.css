@@ -1,17 +1,30 @@
-#lqbr_threshold {
-  width:95%
+#preview {
+  width: 256px;
+  height: 256px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  border: inset 4px;
 }
 
-#lqbr_verticality {
-  margin-left:20px;
-  width:62%
+#joel {
+  line-height: 1.2;
+  font-size: 10px;
+  text-align: center;
 }
 
-#lqbr_dithering {
-  margin-left: 38px;
+#braillegen-output {
+  background-color: #000000;
+  color: #FFFFFF;
+  position: relative;
+  width: 838px;
+  height: 838px;
+  border: outset 4px;
+  border-color: #000000;
+  font-size: 12px;
+  line-height: 13.05px;
+  letter-spacing: -2.25px;
 }
 
-#lqbr_flip {
-  margin-left: 125px;
+#threshold {
+  width: 320px;
 }
-

@@ -6,7 +6,7 @@ import * as lcolonqBraillegen from './subpages/lcolonq_braillegen.js';
 let SUBPAGES = {
   "meivm-encoder": meivmEncoder,
   "meivm-details": meivmDetails,
-  "lcolonq-braillegen":  { init: () => {}, uninit: () => {} },
+  "lcolonq-braillegen": lcolonqBraillegen,
 };
 
 

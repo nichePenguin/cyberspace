@@ -57,18 +57,17 @@
         <h1>Extended Braillegen</h1>
         <hr>
         <h2 style="text-align:center"> Elite hairstylist edition </h2>
-        <span style="line-height:0;font-size:13px">
+        <div id="joel">
           ⠀⠀⠀⠀⠀⠀⢀⣀⣀⣤⣤⣤⣖⣶⣲⣗⣮⢾⢾⣲⢽⡻⣷⣽⢿⣽⡮⣿⢿⡼⡷⡶⣶⢦⣦⣤⣤⣠⣔⡬⡢⣒⠴⣄⢀⠀⠀⠀⠀⠀⠀⠄⠆⡑⡰⠁⠀<br>
           ⠀⢀⠠⡔⢖⢝⢜⠺⣎⢎⢚⠪⡚⡚⠞⠪⠪⠏⢗⡝⢗⠯⡳⣝⢟⢮⡻⢽⠽⠽⡽⢝⢞⢝⢞⢺⡪⡳⡳⡫⣟⢵⢻⢮⢻⢢⢦⢲⠲⡫⠪⠈⢔⠨⠂⠀⠀<br>
           ⠀⠡⠑⠁⠡⠁⠑⠐⢈⠣⠊⠘⡐⠔⠡⠈⠄⠈⠀⠄⠂⠐⠈⠨⠈⠂⠅⠅⠌⠂⠂⠐⠀⠄⠂⠀⠁⠁⠈⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠌⡐⠱⡐⡀⠀<br>
           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠁⠀⠁⠂⠂⠄⠄⠄⠀⡀⡀⡀⡀⠄⠂⠀⢀⠀⠀⠠⢠⠠⡠⠀⠀⠂⠀⠀⠀⠠⠈⠈⠒⠐⠀⠀⠀⠀⠀⠀⠀⠀⠁⠈⠂⠀<br>
           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠈⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        </span>
+        </div>
         <hr>
         <h2 style="color:#CC0000;text-align:center">WIP DUE TO API BEING OPENED</h2>
 	<h3 style="text-align:center">Cool patterns by ctrl_o and others <a href="https://pub.colonq.computer/~ctrl/cgi-bin/gomoco">are here</a></h3>
         <hr>
-	<!--div>
         <div>
           <button id="browse" onclick="browse()"type="button">Browse...</button>
           <input id="file-fake" readonly type="text" name="file"/>
@@ -78,64 +77,69 @@
         </div>
         <hr>
         <div>
-          <label>Greyscale conversion:</label>
-          <select name="conversion" id="lqbr_conversion">
-            <option value="luminance">Luminance</option>
-            <option value="average">Average</option>
+          <div style="text-align:center">
+            <h3>Mode of operation</h3>
+          </div>
+          <span>Full 256x256 -> 128x64 brailleart converter</span><br>
+          <input type="radio" checked="true" name="mode" id="full" value="full"></input><label>Full conversion</label><br>
+          <!--span>Tiling for the reduced char limit</span><br>
+          <input type="radio" name="mode" id="tiling" value="tiling"></input><label>Tiling</label><br-->
+<!--
+          <span>Tile image to use through the character limited Twitch redeem</span><br>
+          <input type="radio" name="mode" id="tiling-legacy" value="tiling-legacy"></input><label>Tiling (Legacy)</label>
+-->
+        </div>
+        <hr>
+        <div>
+          <span>Specify error diffusion matrix to use, if any</span><br>
+          <label>Dithering </label>
+          <select name="dither-type" id="dither-type">
+            <option value="none">None</option>
+            <option value="atkinson">Atkinson</option>
+            <option value="floyd-steinberg">Floyd-Steinberg</option>
+            <option value="jarvis-judice-ninke">Jarvis-Judice-Ninke</option>
+          </select>
+        </div>
+        <div>
+          <span>How RGB should be converted to grayscale</span><br>
+          <label>Greyscale conversion</label>
+          <select name="conversion" id="grayscale">
+            <option value="luminosity">Luminosity</option>
+            <!--option value="average">Average</option>
             <option value="lightness">Lightness</option>
-            <option value="desaturate">Desaturate</option>
+            <option value="desaturate">Desaturate</option-->
             <option value="red">Red</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>
           </select>
-          <input type="checkbox" id="lqbr_dithering" name="dithering"></input>
-          <label>Dithering</label>
         </div>
         <div>
+          <span>Threshold for converting greyscale to monochrome</span><br>
+          <span style="font-size:14px">(also try for different dithering matrices, works best with atkinsons)</span><br>
+          <label>Threshold</label>
+          <input id="threshold" type="range" min=0 max=255 step=1></input>
         </div>
         <div>
-          <label>Horisontal tiling:</label>
-          <select name="lqbr_tiling">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="4">4</option>
-            <option value="8">8</option>
-            <option value="16">16</option>
-          </select>
-          <input type="checkbox" id="lqbr_flip" name="flip"></input>
-          <label>Flip</label>
-        </div>
-        <div>
-          <label>Verticality:</label><br>
-          <input type="radio" name="lqbr_scale" value="resize"></input><label>Resize</label>
-          <input type="radio" name="lqbr_scale" value="crop"></input><label>Crop</label>
-          <input type="range" id="lqbr_verticality" name="verticality"></input>
-        </div>
-       <div>
-          <label>Threshold:</label><br>
-          <input id="lqbr_threshold" name="threshold" type="range"></input>
-        </div>
-        <div id="images">
-          <div class="image-container">
-            <span>Tile Preview</span>
-            <textarea readonly style="width:100%;height:100%"></textarea>
-          </div>
-        </div>
-        <div id="images">
-          <div class="image-container">
-        
-            <span>The Man Preview</span>
-            <img id="image-input" src="res/wait.gif"></img>
-          </div>
-        </div>
-	<div-->
-	<div id="images">
-          <div class="image-container">
-            <img id="image-input" src="res/wait.gif"></img>
-          </div>
+          <label>Invert</label>
+          <input id="invert" type="checkbox"></input>
         </div>
 
-      </div>
+        <hr>
+        <div style="text-align:center">
+          <label>Preview</label><br>
+          <canvas width=256 height=256 id="preview"></canvas>
+        </div>
+        
+        <div style="text-align:center">
+          <label> Brailleview </label><br>
+          <div>
+            <button id="braillegen-copy" type="button"> Copy </button>
+          </div>
+        </div>
+        </div>
+        <div>
+          <div readonly id="braillegen-output"></div>
+        </div>
     </template>
     <template id="meivm-encoder-template">
       <div id="meivm-encoder">

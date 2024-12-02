@@ -12,44 +12,43 @@ function init() {
   document.getElementById("secondary-copy").addEventListener('click', (event) => copy("secondary-text"));
   document.getElementById("encode").addEventListener('click', (event) => encode());
   document.getElementById("browse").addEventListener('click', (event) => browse());
-  document.addEventListener('paste', encoder_paste);
+  document.addEventListener('paste', encoderPaste);
 }
 function uninit() {
-  document.removeEventListener('paste', encoder_paste);
+  document.removeEventListener('paste', encoderPaste);
 }
 
 function browse() {
-  const file_input = document.getElementById("file");
-  const file_fake = document.getElementById('file-fake');
-  if (!file_input.hasAttribute('listener')) {
-    file_input.addEventListener('change', ((source) => {
+  const fileInput = document.getElementById("file");
+  const fileFake = document.getElementById('file-fake');
+  if (!fileInput.hasAttribute('listener')) {
+    fileInput.addEventListener('change', ((source) => {
       source.currentTarget.setAttribute('listener', true);
-      file_fake.value = file_input.files[0].name;
-      open_file(file_input.files[0])
+      fileFake.value = fileInput.files[0].name;
+      openFile(fileInput.files[0])
     }));
   }
-  file_input.click();
+  fileInput.click();
 }
 
-function load_image(data) {
+function loadImage(data) {
   INPUT = data.split("base64,")[1];
   document.getElementById("image-input").src = data;
   document.getElementById("encode").disabled = false;
 }
 
-function open_file(file) {
+function openFile(file) {
   const reader = new FileReader();
   reader.readAsDataURL(file);
-  reader.onloadend = () => load_image(reader.result);
+  reader.onloadend = () => loadImage(reader.result);
   reader.onerror = (error) => console.log(error);
 }
 
-
-function encoder_paste(event) {
+function encoderPaste(event) {
   const items = (event.clipboardData || event.originalEvent.clipboardData).items;
   for (let index in items) {
     const item = items[index];
-    if (item.kind === 'file') open_file(item.getAsFile());
+    if (item.kind === 'file') openFile(item.getAsFile());
   }
 }
 
@@ -68,24 +67,24 @@ function encode() {
     method: "POST",
     body: data
   }).then(response => {
-    const content_type = response.headers.get("content-type");
-    if (content_type) {
-      if (content_type == "application/json") {
+    const contentType = response.headers.get("content-type");
+    if (contentType) {
+      if (contentType == "application/json") {
         return response.json();
-      } else if (content_type == "text/plain") {
-        response.text().then(set_error);
+      } else if (contentType== "text/plain") {
+        response.text().then(setError);
       } else {
         console.log("Error output is not in text/plain, the guy probably panicked");
         console.log(response.text());
       }
     }
-    set_error("Failed to encode: See console log")
+    setError("Failed to encode: See console log")
     Promise.reject('Failed to encode');
   })
   .then(load);
 }
 
-function set_error(errorMessage){
+function setError(errorMessage){
   document.getElementById("error").style["display"] = "block";
   document.getElementById("error-message").innerText = errorMessage
 }
