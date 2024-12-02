@@ -1,0 +1,12 @@
+/cgi-bin/
+/pieces/
+
+res/
+*.png
+*.jpg
+*.gif
+*.ico
+*.woff2
+
+.*
+!.gitignore
