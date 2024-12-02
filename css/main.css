@@ -35,6 +35,19 @@ body {
   left: 50%;
   transform: translate(-50%,0);
 }
+#festive-hat {
+  background-image: url(../res/festive_headwear_on_account_of_approaching_or_already_passed_christmas_and_or_new_year.png);
+  width: 133px;
+  height: 172px;
+  position: relative;
+  top: -10%;
+  left: 40%;
+  z-index: 1001;
+  transition: transform 0.2s ease-in-out;
+}
+#festive-hat:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
 .title {
   font-family: 'Cormorant';
   font-size: 195%;
