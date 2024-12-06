@@ -52,7 +52,7 @@ function braille(canvas, mode) {
   }
   let preview = output;
   if (mode == 'as-is') {
-    preview = output.replace('\n', "<br>");
+    preview = output.replace(/\n/g, "<br>");
     return [output, preview];
   }
   if (mode == 'tiling') {
