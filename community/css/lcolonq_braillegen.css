@@ -1,6 +1,6 @@
 #preview {
   width: 256px;
-  height: 256px;
+  height: 228px;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
   border: inset 4px;
@@ -12,17 +12,22 @@
   text-align: center;
 }
 
+#braillegen-copy {
+  width: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
 #braillegen-output {
   background-color: #000000;
   color: #FFFFFF;
   position: relative;
-  width: 838px;
-  height: 838px;
+  width: 868px;
+  height: 741px;
   border: outset 4px;
   border-color: #000000;
   font-size: 12px;
-  line-height: 13.05px;
-  letter-spacing: -2.25px;
+  line-height: 13px;
+  letter-spacing: -2px;
 }
 
 #threshold {
@@ -31,4 +36,11 @@
 #content > div > * > #dither-threshold-note {
   font-size: 14px;
   display: none;
+}
+
+#tiling-settings {
+  display:none
+}
+#as-is-settings{
+  display:none
 }

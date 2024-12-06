@@ -65,8 +65,7 @@
           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠈⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
         </div>
         <hr>
-        <h2 style="color:#CC0000;text-align:center">WIP DUE TO API BEING OPENED</h2>
-	<h3 style="text-align:center">Cool patterns by ctrl_o and others <a href="https://pub.colonq.computer/~ctrl/cgi-bin/gomoco">are here</a></h3>
+	<h3 style="text-align:center">See also: cool patterns by ctrl_o and others <a href="https://pub.colonq.computer/~ctrl/cgi-bin/gomoco">are here</a></h3>
         <hr>
         <div>
           <button id="browse" onclick="browse()"type="button">Browse...</button>
@@ -80,14 +79,12 @@
           <div style="text-align:center">
             <h3>Mode of operation</h3>
           </div>
-          <span>Full 256x256 -> 128x64 brailleart converter</span><br>
+          <span>Full 256x228 -> 128x57 brailleart converter to use over API</span><br>
           <input type="radio" checked="true" name="mode" id="full" value="full"></input><label>Full conversion</label><br>
-          <!--span>Tiling for the reduced char limit</span><br>
-          <input type="radio" name="mode" id="tiling" value="tiling"></input><label>Tiling</label><br-->
-<!--
-          <span>Tile image to use through the character limited Twitch redeem</span><br>
-          <input type="radio" name="mode" id="tiling-legacy" value="tiling-legacy"></input><label>Tiling (Legacy)</label>
--->
+          <span>Tiling for a reduced char limit, usable in a twitch redeem</span><br>
+          <input type="radio" name="mode" id="tiling" value="tiling"></input><label>Tiling</label><br>
+          <span>Braillify/dither image as is, not guaranteed to be a valid hairstyle</span><br>
+          <input type="radio" name="mode" id="as-is" value="as-is"></input><label>As is</label><br>
         </div>
         <hr>
         <div>
@@ -123,11 +120,36 @@
           <label>Invert</label>
           <input id="invert" type="checkbox"></input>
         </div>
+        <div id="tiling-settings">
+        <hr>
+          <!--div style="text-align:center">
+            <h3>Tiling</h3>
+          </div-->
+        <label>Dimensions</label>
+        <select name="dimensions" id="dimensions">
+            <option value="128">128x3 (256x12 px)</option>
+            <option value="64">64x7 (128x28 px)</option>
+            <option selected value="32">32x15 (64x60 px)</option>
+            <option value="16">16x31 (32x124 px)</option>
+        </select>
+        </div>
+        <div id="as-is-settings">
+        <hr>
+        <label>Scale</label>
+          <input name="width" id="width" type="number" step=1></input>
+          <label>x</label>
+          <input name="height" id="height" type="number" step=1></input>
+          <br>
+          <label>Keep aspect ratio:</label>
+          <input type="checkbox" id="aspect-ratio" name="aspect-ratio"></input>
+          <br>
+          <button id="reset-size">Reset</button>
+        </div>
 
         <hr>
         <div style="text-align:center">
           <label>Preview</label><br>
-          <canvas width=256 height=256 id="preview"></canvas>
+          <canvas width=256 height=228 id="preview"></canvas>
         </div>
         
         <div style="text-align:center">

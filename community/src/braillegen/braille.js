@@ -29,7 +29,7 @@ function monochromize(canvas, outputCanvas, grayscale, threshold, invert) {
 }
 
 // assuming thresholded
-function braille(canvas) {
+function braille(canvas, mode) {
   let output = "";
   const data = canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height).data;
   for (let y = 0; y < canvas.height; y += 4) {
@@ -46,9 +46,36 @@ function braille(canvas) {
         (getBit(data, x+1, y+3, canvas.width) << 7);
       output += String.fromCodePoint(codePoint);
     }
-    output += "\n";
+    if (mode == 'as-is') {
+      output += '\n'
+    }
   }
-  return output;
+  let preview = output;
+  if (mode == 'as-is') {
+    preview = output.replace('\n', "<br>");
+    return [output, preview];
+  }
+  if (mode == 'tiling') {
+    output = tile(output, canvas.width/2); 
+    preview = output.repeat(128*57/output.length + 1).substring(0, 128*57)
+    output = [...Array(Math.ceil(500/128))].map((_, index) => output.slice(index * 128, (index + 1)*128)).join('\n');
+  } else {
+    output = [...Array(57)].map((_, index) => output.slice(index * 128, (index + 1)*128)).join('\n');
+  }
+  preview = [...Array(57)].map((_, index) => preview.slice(index * 128, (index + 1)*128)).join('<br>');
+  return [output, preview];
+}
+
+function tile(input, width) {
+  const segments = input.length/width;
+  const perLine = 128/width;
+  let result = Array(segments);
+  for (let i = 0; i < segments; i++) {
+    // 4 is Math.ceil(500/128) - max rows per sequence
+    const index = (i%4)*perLine + Math.floor(i/4)
+    result[index] = input.substring(i*width, (i+1)*width);
+  }
+  return result.join('');
 }
 
 export { braille, monochromize };
