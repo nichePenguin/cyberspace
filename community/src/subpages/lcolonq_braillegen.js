@@ -89,9 +89,9 @@ function updateCanvasDimensions(mode) {
   switch (mode) {
     case 'full':
       CANVAS.width = 256;
-      CANVAS.height = 228;
+      CANVAS.height = 256;
       CANVAS.style.width = "256px";
-      CANVAS.style.height = "228px";
+      CANVAS.style.height = "256px";
       break;
     case 'tiling':
       const width = Number(document.getElementById('dimensions').value);
@@ -108,7 +108,7 @@ function updateCanvasDimensions(mode) {
         CANVAS.height = document.getElementById('height').value;
       }
       CANVAS.style.width = "256px";
-      CANVAS.style.height = "228px";
+      CANVAS.style.height = "256px";
       break;
     default:
       console.error(`Unknown mode:${newMode}`)

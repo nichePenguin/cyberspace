@@ -57,12 +57,12 @@ function braille(canvas, mode) {
   }
   if (mode == 'tiling') {
     output = tile(output, canvas.width/2); 
-    preview = output.repeat(128*57/output.length + 1).substring(0, 128*57)
+    preview = output.repeat(128*64/output.length + 1).substring(0, 128*64)
     output = [...Array(Math.ceil(500/128))].map((_, index) => output.slice(index * 128, (index + 1)*128)).join('\n');
   } else {
-    output = [...Array(57)].map((_, index) => output.slice(index * 128, (index + 1)*128)).join('\n');
+    output = [...Array(64)].map((_, index) => output.slice(index * 128, (index + 1)*128)).join('\n');
   }
-  preview = [...Array(57)].map((_, index) => preview.slice(index * 128, (index + 1)*128)).join('<br>');
+  preview = [...Array(64)].map((_, index) => preview.slice(index * 128, (index + 1)*128)).join('<br>');
   return [output, preview];
 }
 
