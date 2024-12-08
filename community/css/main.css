@@ -127,6 +127,10 @@ button:hover:enabled {
   color: #000000;
   white-space: nowrap;
 }
+.button-peek > img {
+  width: 32px;
+  height: 32px;
+}
 
 .button-peek {
   cursor: pointer;

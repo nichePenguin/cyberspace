@@ -1,5 +1,7 @@
 // Wand
 function wand(anchor_container, xoffset, yoffset) {
+  if (!xoffset) xoffset = 0;
+  if (!yoffset) yoffset = 0;
   const wand = document.createElement("div");
   wand.className = "wand";
   wand.style.top = -32 + yoffset + "px";

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/meivm_encoder.css">
     <link rel="stylesheet" href="css/meivm_details.css">
+    <link rel="stylesheet" href="css/meivm_runic.css">
     <link rel="stylesheet" href="css/lcolonq_braillegen.css">
     <script type="module" src="src/main.js" > </script>"
   </head>
@@ -36,6 +37,10 @@
         <div class="button-peek" key="meivm-details"><img src="res/wave_vm_how.png"></img>
           <span class="peek-text" text="Wave CPU Sprite Renderer: Source"></span>
         </div>
+        <div class="button-peek" key="meivm-runic"><img src="res/wave_vm_runic.png"></img>
+          <span class="peek-text" text="Runic Compression"></span>
+        </div>
+
       </div>
       <div class="panel-entry-container">
         <button class="panel-entry" who="LCOLONQ" type="button">
@@ -247,6 +252,31 @@
         </div>
       </div>
     </template>
+
+    <template id="meivm-runic-template"><div id="meivm-runic">
+      <h1>Runic Compression</h1>
+      <hr>
+      <h3>Wave Vector CPU SPEC:
+        <a href="https://github.com/Meisaka/MeiVM2/blob/main/vm.txt">github</a>
+      </h3>
+      <hr>
+      <div>
+        <span>Replace data and arguments with <a href="https://github.com/Meisaka/MeiVM2/blob/b8f613ea746778a07464903f4675c36669e53bd0/vm.txt#L153">runic hexadecimal</a></span>
+        <br>
+        <input type="checkbox" name="full-runic" id="full-runic"></input>
+        <label>Full Runic</label>
+      </div>
+      <div>
+        <label>Input</label><br>
+        <textarea id="runic-input" name="runic-input"></textarea>
+      </div>
+      <div>
+        
+        <label>Output</label><div class="wand-anchor"></div><br>
+        <textarea readonly id="runic-output" name="runic-output"></textarea><br>
+        <button id="runic-output-copy" type="button">Copy</button>
+      </div>
+    </div></template>
 
     <template id="meivm-details-template"><div id="meivm-details">
       <h1>Wave CPU Image Renderer: Source</h1>
