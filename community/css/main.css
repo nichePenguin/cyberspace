@@ -153,12 +153,17 @@ button:hover:enabled {
 }
 
 h1 {
+  display: flex;
   padding: 10px;
   background-color: #070079;
   border: 4px outset;
   color: #FFFFFF;
+  align-items: center;
 }
-
+.h1-icon {
+  margin-bottom: 4px;
+  margin-right: 10px;
+}
 img {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
