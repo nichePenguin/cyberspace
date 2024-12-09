@@ -46,3 +46,33 @@
   width: 90%;
   height: 120px;
 }
+
+.runic-label {
+  animation: colorRotate 5s linear 0s infinite;
+}
+@keyframes colorRotate {
+  0% {
+    color: #cf0000;
+  }
+  12.5% {
+    color: #cfa500;
+  }
+  32.5 {
+    color: #00cf3e;
+  }
+  45% {
+    color: #00cbcf;
+  }
+  69.5% {
+    color: #0000cf;
+  }
+  75% {
+    color: #8a00cf;
+  }
+  87.5% {
+    color: #cf008a;
+  }
+  100% {
+    color: #cf0000;
+  }
+}

@@ -141,10 +141,10 @@ function compressWords(input, runic) {
       i -= count - 1;
       firstZeroIndex = -1;
     }
-    if (word.endsWith('000')) input[i] = rightAlign(word[0], runic)
-    else if (word.endsWith('00')) input[i] = rightAlign(word.slice(0, 2), runic)
-    else if (word.startsWith('000')) input[i] = leftAlign(word[3], runic)
-    else if (word.startsWith('00')) input[i] = leftAlign(word.slice(0, 2), runic)
+    if (word.endsWith('000')) input[i] = leftAlign(word[0], runic)
+    else if (word.endsWith('00')) input[i] = leftAlign(word.slice(0, 2), runic)
+    else if (word.startsWith('000')) input[i] = rightAlign(word[3], runic)
+    else if (word.startsWith('00')) input[i] = rightAlign(word.slice(2, 4), runic)
     
   }
   if (firstZeroIndex != -1) {
@@ -173,7 +173,7 @@ function compress(input, runic) {
   compressWords(words, runic);
   compressRepeats(words, runic);
   if (runic) runify(words);
-  return words.join(''); // remove space?
+  return words.join(''); 
 }
 
 function rightAlign(value, runic) {
@@ -187,7 +187,7 @@ function leftAlign(value, runic) {
 }
 
 function writeZeroWord(count, runic) {
-  if (count == 1) return "ᚠ";
+//  if (count == 1) return "ᚠ";
   return `${getArgument(count, runic)}ᚠ`;
 }
 

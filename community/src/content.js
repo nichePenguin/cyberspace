@@ -3,12 +3,14 @@ import * as meivmEncoder from "./subpages/meivm_encoder.js";
 import * as meivmDetails from './subpages/meivm_details.js';
 import * as meivmRunic from './subpages/meivm_runic.js';
 import * as lcolonqBraillegen from './subpages/lcolonq_braillegen.js';
+import * as lcolonqSpideroil from './subpages/lcolonq_spideroil.js';
 
 let SUBPAGES = {
   "meivm-encoder": meivmEncoder,
   "meivm-details": meivmDetails,
   "meivm-runic": meivmRunic,
   "lcolonq-braillegen": lcolonqBraillegen,
+  "lcolonq-spideroil": lcolonqSpideroil, 
 };
 
 

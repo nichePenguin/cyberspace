@@ -50,6 +50,9 @@
         <div class="button-peek" key="lcolonq-braillegen"><img src="res/lcolonq_braille.png"></img>
           <span class="peek-text" text="Extended Braillegen"></span>
         </div>
+        <div class="button-peek" key="lcolonq-spideroil"><img src="res/lcolonq_spideroil.png"></img>
+          <span class="peek-text" text="&lt;span id=&quot;r&quot;&gt;!WIP!&lt;/span&gt; Spider Oil Explorer"></span>
+        </div>
       </div>
       <div class="panel-separator"></div>
     </div>
@@ -169,6 +172,20 @@
           <div readonly id="braillegen-output"></div>
         </div>
     </template>
+
+    <template id="lcolonq-spideroil-template"><div id="lcolonq-spideroil" >
+        <h1><img class="h1-icon" src="res/lcolonq_spideroil.png"></img> Spider Oil Explorer</h1>
+      <hr>
+      <div style="position: relative">
+        <img style="position: absolute; left: 73%"src="res/oillamp.gif"></img>
+        <img src="res/spider.gif"></img>
+      </div>
+      <hr>
+      <div class="code" id="spider-oils">
+      </div>
+    </div></template>
+
+
     <template id="meivm-encoder-template">
       <div id="meivm-encoder">
         <h1><img class="h1-icon" src="res/wave_vm.png">Wave CPU Sprite Renderer Image Encoder</h1>
@@ -197,6 +214,12 @@
           </br>
           <input type="checkbox" id="black-bkg" name="black-bkg"/>
           <label> Transparent background </label>
+        </div>
+        <div>
+          <span>Compress code into <a href="https://github.com/Meisaka/MeiVM2/blob/b8f613ea746778a07464903f4675c36669e53bd0/vm.txt#L153">runic hexadecimal</a></span>
+          </br>
+          <input type="checkbox" id="runic" name="runic"/>
+          <label id="runic-label"> Runic </label>
         </div>
         <div>
           <button type="button" id="encode" disabled> Encode </button>
