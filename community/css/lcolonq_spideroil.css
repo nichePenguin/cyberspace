@@ -1,0 +1,15 @@
+.button-oil {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: 0 0;
+  background-image: url("../res/oil_up.png");
+}
+
+.button-oil:hover {
+  background-position: 0 20px;
+}
+
+.oil-icon {
+  margin-right: 10px;
+}
