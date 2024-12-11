@@ -46,8 +46,3 @@ swizzle r7.zyzw           # jump to :Z => next line
 # == line loop end ==
 swizzle r7.wyzw           # jump to :W => restart
 # == main loop end
-
-# 3 words of header ?
-# 1 word of offset ?
-# 32 words if image
-# 26 words of code
