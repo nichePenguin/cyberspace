@@ -338,7 +338,7 @@
         <tr><td># == pixel loop start ==</td></tr>
         <tr><td>swizzle r7.xxzw </td><td># :Y pixels</td></tr>
         <tr><td>mov r0.xyzw, r5.xyzw </td><td># r5 - pixel data</td></tr>
-        <tr><td>and c7, r5 </td><td># apply mask - get color indexes</td></tr>
+        <tr><td>and c2, r5 </td><td># apply mask - get color indexes</td></tr>
         <tr><td>load [r5.xyzw], r6.xyzw </td><td># r6 - color data [freeing r5]</td></tr>
         <tr><td>store r6.xyzw, [r1.xyzw]+&nbsp</td><td># draw and increment pixel target address [freeing r6]</td></tr>
         <tr><td>rol.w r0, 2 </td><td># rotate shift image data to the next pixel</td></tr>

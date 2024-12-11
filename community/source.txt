@@ -1,15 +1,15 @@
 #      x    y    z    w
 #c0 0000 A7F4 5ECB 0600 - colormap
-#c1 0838 0840 08b8 08c0 - starting address (center)
-#c2 0000 0000 0000 0000 - colormap mask (0b11)
-#c3 0100 0100 0100 0100 - line address increment (256, two lines of 128)
+#c1 0838 0840 08b8 08c0 - starting address (0800 0808 0880 0888 left)
+#c2 0003 0003 0003 0003 - colormap mask (0b11)
+#c3 0100 0100 0100 0100 - line address increment (256, two lines of 128x64)
 #c4 0001 0000 0000 0000 - 1 | 0 | 0 | 0 (line increment)
 #c5 0041 0000 0000 0000 - image data start
 #c6 0064 0000 0000 0000 - program start 
-#c7 0003 0003 0003 0003 - colormap mask (0b11)
 
 # === header code ===
-mov c6.x, r7.x            # set pointer to program start
+
+#mov c6.x, r7.x
 
 # === main code ===
 # == main loop start ==
@@ -24,9 +24,9 @@ mov r2.xyzw, r1.xyzw      # r1 - current pixel target address
 # == pixel loop start ==
 swizzle r7.xxzw           # :Y pixels
 mov r0.xyzw, r5.xyzw      # r5 - pixel data
-and c7, r5                # apply mask - get color indexes
+and c2, r5                # apply mask - get color indexes
 load [r5.xyzw], r6.xyzw   # r6 - color data [freeing r5]
-store r6.xyzw, [r1.xyzw]+ # draw and increment pixel target address [freeing r6]
+store r6.xyzw, [r1.xyzw]+    # draw and increment pixel target address [freeing r6]
 rol.w r0, 2               # roll image data to the next pixel
 # linebreak test
 mov r1.xyzw, r6.xyzw      # r6 - test result
@@ -46,3 +46,8 @@ swizzle r7.zyzw           # jump to :Z => next line
 # == line loop end ==
 swizzle r7.wyzw           # jump to :W => restart
 # == main loop end
+
+# 3 words of header ?
+# 1 word of offset ?
+# 32 words if image
+# 26 words of code
