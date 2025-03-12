@@ -17,11 +17,13 @@ body {
   background-color: #070079;
   border: 4px outset;
   text-align: center;
-  font-size: 26px
+  font-size: 26px;
 }
 .panel-separator {
   margin: 6px;
   border: 4px outset;
+  text-align: center;
+  color: #000000;
 }
 .profile-pic {
   width: 70px;

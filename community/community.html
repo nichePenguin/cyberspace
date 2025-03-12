@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/meivm_runic.css">
     <link rel="stylesheet" href="css/lcolonq_braillegen.css">
     <link rel="stylesheet" href="css/lcolonq_spideroil.css">
+    <link rel="stylesheet" href="css/tarot_dashboard.css">
     <script type="module" src="src/main.js" > </script>"
   </head>
   <body onload="document.body.style.visibility=`visible`;"> <!-- FOUC fix -->
@@ -26,7 +27,20 @@
     <div id="left-panel">
       <div class="panel-title">COMMUNITY SECTION ☺︎</div>
       <a href="../index.html"><button class="panel-entry" type="button">&#60;&#60; BACK</button></a>
-      <div class="panel-separator"></div>
+
+      <div class="panel-separator">General</div>
+      <div class="panel-entry-container">
+        <button class="panel-entry" who="Tarot" type="button">
+          <img class="profile-pic" src="res/tarot.png"></img>
+          <div class="panel-entry-text"> Tarot </div>
+        </button>
+        <div class="button-peek" key="tarot-dashboard"><img src="res/tarot_dashboard.png"></img>
+          <span class="peek-text" text="Tarot Dashboard"></span>
+        </div>
+      </div>
+
+
+      <div class="panel-separator"> Twitch </div>
       <div class="panel-entry-container">
         <button class="panel-entry" who="Meisaka" type="button">
           <img class="profile-pic" src="res/meisaka.png"></img>
@@ -55,30 +69,48 @@
           <span class="peek-text" text="&lt;span id=&quot;r&quot;&gt;!WIP!&lt;/span&gt; Spider Oil Explorer"></span>
         </div>
       </div>
-      
-      <div class="panel-separator"></div>
-
-      <div class="panel-entry-container">
-        <button class="panel-entry" who="LCOLONQ" type="button">
-          <img class="profile-pic" src="res/tarot.png"></img>
-          <div class="panel-entry-text"> Tarot </div>
-        </button>
-        <div class="button-peek" key="tarot-dashboard"><img src="res/tarot_dashboard.png"></img>
-          <span class="peek-text" text="Tarot Dashboard"></span>
-        </div>
-      </div>
 
     </div>
 
     <!-- TEMPLATES -->
 
     <div id="templates">
-      <template id="tarot-dashboard-template">
-      <div id="tarot-dashboard">
-        <h1><img class="h1-icon" src="res/tarot_dashboard.png"></img>Tarot Dashboard</h1>
-        <hr>
+        <template id="tarot-dashboard-template">
+        <div id="tarot-dashboard">
+          <h1><img class="h1-icon" src="res/tarot_dashboard.png"></img>Tarot Dashboard</h1>
+          <hr>
+        </div>
 
-      </div>
+        <div>
+            <h2 style="text-align:center">Last GFP Layout</h2>
+            <span style="text-align:center">GCP3 source of random values, 0.0 to 1.0, Gaussian distribution</span></br>
+            <div id="gfp">
+                <div id="gfp-card-1" class="gfp-card">
+                    <div class="gfp-text">
+                      <span class="gfp-affinity"> </span><br>
+                      <span class="gfp-title"> </span>
+                    </div>
+                    <img class="card-big" src="res/tarot/back.png"></img>
+                </div>
+                <div id="gfp-card-2" class="gfp-card">
+                    <img class="card-big" src="res/tarot/back.png"></img>
+                    <div class="gfp-text">
+                      <span class="gfp-title"> </span><br>
+                      <span class="gfp-affinity"> </span>
+                    </div>
+                </div>
+                <div id="gfp-card-3" class="gfp-card">
+                    <div class="gfp-text">
+                      <span class="gfp-affinity"> </span><br>
+                      <span class="gfp-title"> </span>
+                    </div>
+                    <img class="card-big" src="res/tarot/back.png"></img>
+                </div>
+            </div>
+        </div>
+
+      <hr>
+
       </template>
 
       <template id="lcolonq-braillegen-template">
