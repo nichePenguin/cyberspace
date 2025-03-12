@@ -154,10 +154,16 @@ body {
 #node1 {
   animation: node1 1s ease-in-out forwards;
 }
+#music {
+  background-image: url('../res/music.png');
+}
 
 #node_square2 { background-color: #c2ffed; }
 #node2 {
   animation: node2 1s ease-in-out forwards;
+}
+#art {
+  background-image: url('../res/brush.png');
 }
 
 #node_square3 { background-color: #f3ffc2; }
@@ -170,7 +176,6 @@ body {
 #motivate {
   background-image: url('../res/arrow.png');
 }
-
 #node_square4 { background-color: #ffedc2; }
 #node4 {
   animation: node4 1s ease-in-out forwards;
@@ -180,12 +185,21 @@ body {
 #node5 {
   animation: node5 1s ease-in-out forwards;
 }
+#gaming {
+  background-image: url('../res/gaming.png');
+}
 
+#book{
+  background-image: url('../res/book.png');
+}
 #node_square6 { background-color: #ffc2d4; }
 #node6 {
   animation: node6 1s ease-in-out forwards;
 }
 
+#study{
+  background-image: url('../res/study.png');
+}
 #node_square7 { background-color: #cec2ff; }
 #node7 {
   animation: node7 1s ease-in-out forwards;
