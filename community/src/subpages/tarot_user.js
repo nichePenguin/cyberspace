@@ -46,7 +46,7 @@ function poll() {
   if (!pollEnabled) {
     return;
   }
-  console.log("[User Draw] Polling in 3s...")
+  console.log("[User Draw] Polling in 2s...")
   userDrawPollId = setTimeout( () => {
     fetchByKey("history", (history_raw) => { checkUpdate(parseCsv(history_raw).reverse()) })
   }, 2 * 1000);
