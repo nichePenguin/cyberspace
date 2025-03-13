@@ -64,10 +64,28 @@ function checkUpdate(newHistory) {
   poll();
 }
 
+function prefetchImages(gfp) {
+  for (var i = 0; i < gfp.length; i++) {
+    let line = gfp[i];
+    let image = new Image();
+    image.src = "res/tarot/" + tarotToPng[line[1]];
+  }
+}
+
+function cardToPath(cardName) {
+  if (cardName.includes('Reversed')) {
+    return "res/tarot/" + tarotToPng[cardName.replace(' (Reversed)', '')];
+  } else {
+    return "res/tarot/" + tarotToPng[cardName];
+  }
+}
+
 function updateDraws(newElements) {
   if (newElements.length == 0) {
     return;
   }
+
+  prefetchImages(newElements);
 
   let container = document.querySelector("#history-container");
   if (container.children.length != 0) {
@@ -117,11 +135,9 @@ function createDrawElement(historyEntry) {
   let cardName = historyEntry[4];
   if (cardName.includes('Reversed')) {
     newNode.querySelector(".user-draw").style["background-color"] = "#FF00FF33";
-    image.src = "res/tarot/" + tarotToPng[cardName.replace(' (Reversed)', '')];
     image.style = "transform: rotate(180deg)";
-  } else {
-    image.src = "res/tarot/" + tarotToPng[cardName];
   }
+  image.src = cardToPath(cardName);
 
   let affinity = historyEntry[5];
   let affinityElement = newNode.querySelector('.user-draw-affinity');
