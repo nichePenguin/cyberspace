@@ -43,3 +43,46 @@
 #gfp-card-3 {
   margin-top: 60px;
 }
+
+#gfp-calc-container {
+  text-align: center;
+}
+
+#history-container {
+  max-width: 738px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  flex: 1 1 auto;
+}
+
+.user-draw {
+  width: 335px;
+  height: 135px;
+  padding: 8px;
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  background-color: #00FF0033;
+  border-radius: 5px;
+  transition: opacity 300ms;
+}
+
+.user-card-container > img {
+  transition: transform 300ms linear;
+}
+
+.user-draw-info {
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.user-card-container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.user-draw-affinity {
+  display: inline-block;
+  margin-top: 7px;
+}

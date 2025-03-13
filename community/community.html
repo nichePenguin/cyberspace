@@ -34,8 +34,11 @@
           <img class="profile-pic" src="res/tarot.png"></img>
           <div class="panel-entry-text"> Tarot </div>
         </button>
-        <div class="button-peek" key="tarot-dashboard"><img src="res/tarot_dashboard.png"></img>
-          <span class="peek-text" text="Tarot Dashboard"></span>
+        <div class="button-peek" key="tarot-gfp"><img src="res/tarot_gfp.png"></img>
+          <span class="peek-text" text="Global Fate Project"></span>
+        </div>
+        <div class="button-peek" key="tarot-user"><img src="res/tarot_user.png"></img>
+          <span class="peek-text" text="User Draw History"></span>
         </div>
       </div>
 
@@ -72,18 +75,52 @@
 
     </div>
 
-    <!-- TEMPLATES -->
+    <!-- MISC TEMPLATES -->
+    <template id="user-draw-template">
+          <div class="user-draw">
+            <div class="user-card-container">
+              <img class="card" src="res/tarot/back.png"></img>
+              <br>
+              <span class="user-draw-affinity"> +50 </span>
+            </div>
+            <div class="user-draw-info">
+              <span class="user-draw-card-name" style="text-align:center">IV: Emperor</span>
+              <br>
+              <span class="user-channel">At #lcolonq</span>
+              <br>
+              <span>By <span class="user-name">maradyne_</span></span>
+              <br>
+              <br>
+              <br>
+              <span class="user-draw-date" style="bottom: 0%; text-align:center">3/13/2025, 12:44:06 PM UTC</span>
+            </div>
+          </div>
+    </template>
+    <!-- CONTENT TEMPLATES -->
 
     <div id="templates">
-        <template id="tarot-dashboard-template">
-        <div id="tarot-dashboard">
-          <h1><img class="h1-icon" src="res/tarot_dashboard.png"></img>Tarot Dashboard</h1>
+        <template id="tarot-user-template"><div id ="tarot-user">
+        <h1><img class="h1-icon" src="res/tarot_user.png"></img>User Draw History</h1>
+        <hr>
+
+        <div id ="history-container">
+        </div>
+        </div></template>
+
+        <template id="tarot-gfp-template">
+        <div id="tarot-gfp">
+          <h1><img class="h1-icon" src="res/tarot_dashboard.png"></img>Global Fate Project</h1>
           <hr>
         </div>
 
         <div>
-            <h2 style="text-align:center">Last GFP Layout</h2>
-            <span style="text-align:center">GCP3 source of random values, 0.0 to 1.0, Gaussian distribution</span></br>
+            <h2 style="text-align:center">Live Global Fate Project (GFP) Layout</h2>
+            <div style="text-align:center">
+            <span><a href="https://gcp3.net/">GCP3</a> source of random values, 0.0 to 1.0, gaussian distribution.</span></br></br>
+            <span>Affinity values updated monthly. Subjective.</span></br></br>
+            <span>Endpoint is <a href="https://pub.colonq.computer/~nichepenguin/cgi-bin/np-gfp">here</a>. Page updates every 3 seconds.</span></br></br>
+            </div>
+            <hr>
             <div id="gfp">
                 <div id="gfp-card-1" class="gfp-card">
                     <div class="gfp-text">
@@ -108,8 +145,14 @@
                 </div>
             </div>
         </div>
-
-      <hr>
+        <hr>
+        <div id="gfp-calc-container">
+            <span id="gfp-date"> </span>
+            <br>
+            <span id="gfp-calc"> </span>
+            <br>
+        </div>
+        <hr>
 
       </template>
 
