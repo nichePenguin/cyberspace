@@ -64,11 +64,11 @@ function checkUpdate(newHistory) {
   poll();
 }
 
-function prefetchImages(gfp) {
-  for (var i = 0; i < gfp.length; i++) {
-    let line = gfp[i];
+function prefetchImages(newElements) {
+  for (var i = 0; i < newElements.length; i++) {
+    let cardName = newElements[i][4];
     let image = new Image();
-    image.src = "res/tarot/" + tarotToPng[line[1]];
+    image.src = cardToPath(cardName);
   }
 }
 
