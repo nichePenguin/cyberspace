@@ -156,7 +156,7 @@ function createDrawElement(historyEntry) {
   username.innerText = historyEntry[2];
   username.style.color = `${historyEntry[3]}`;
 
-  newNode.querySelector(".user-draw-date").innerText = `${new Date(parseInt(historyEntry[0]) * 1000).toLocaleString()} UTC`;
+  newNode.querySelector(".user-draw-date").innerText = `${new Date(parseInt(historyEntry[0]) * 1000).toLocaleString()}`;
 
   return newNode;
 }

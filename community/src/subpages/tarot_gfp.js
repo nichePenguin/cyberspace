@@ -51,7 +51,7 @@ function loadGfp(gfp) {
       let out = (parseInt(a) + parseInt(b) + parseInt(c) + 150.0) / 300.0;
       calc.setAttribute("text", `(${affinity_signed(a)} ${affinity_signed(b)} ${affinity_signed(c)} + 150) / 300 = ${out}`);
 
-      date.setAttribute("text", `Draw time: ${new Date(parseInt(gfp[0][0]) * 1000).toLocaleString()} UTC`);
+      date.setAttribute("text", `Draw time: ${new Date(parseInt(gfp[0][0]) * 1000).toLocaleString()}`);
       typingAnim(date, 1);
       typingAnim(calc, 1);
     }, 1500);
