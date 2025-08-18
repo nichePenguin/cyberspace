@@ -2,196 +2,196 @@
   {
     "name": "Red-brown Longhorn Beetle",
     "latin": "Stictoleptura rubra",
-    "image": "res/bugs/red_brown_longhorn_beetle.png",
+    "image": "res/bugs/red_brown_longhorn_beetle.avif",
     "tags": ["bug", "forest"],
     "identification": 5
   },
   {
     "name": "Sycamore (larvae)",
     "latin": "Acronicta aceris",
-    "image": "res/bugs/sycamore_larvae.png",
+    "image": "res/bugs/sycamore_larvae.avif",
     "tags": ["bug", "park"],
     "identification": 5
   },
   {
     "name": "Horse Fly",
     "latin": "Tabanidae",
-    "image": "res/bugs/horse_fly.png",
+    "image": "res/bugs/horse_fly.avif",
     "tags": ["bug", "forest"],
     "identification": 5
   },
   {
     "name": "Copse Snail",
     "latin": "Arianta arbustorum",
-    "image": "res/bugs/copse_snail.png",
+    "image": "res/bugs/copse_snail.avif",
     "tags": ["not_bug", "park", "mollusk"],
     "identification": 4
   },
   {
     "name": "Great Blackclock",
     "latin": "Pterostichus niger",
-    "image": "res/bugs/great_blackclock.png",
+    "image": "res/bugs/great_blackclock.avif",
     "tags": ["bug", "park"],
     "identification": 4
   },
   {
     "name": "Dingy Footman",
     "latin": "Collita griseola",
-    "image": "res/bugs/dingy_footman.png",
+    "image": "res/bugs/dingy_footman.avif",
     "tags": ["bug", "park"],
     "identification": 3
   },
   {
     "name": "Bowed Jumper",
     "latin": "Evarcha arcuata",
-    "image": "res/bugs/bowed_jumper.png",
+    "image": "res/bugs/bowed_jumper.avif",
     "tags": ["spider", "forest"],
     "identification": 3
   },
   {
     "name": "European Tarnished Plant Bug",
     "latin": "Lygus rugulipennis",
-    "image": "res/bugs/european_tarnished_plant_bug.png",
+    "image": "res/bugs/european_tarnished_plant_bug.avif",
     "tags": ["bug", "forest"],
     "identification": 4
   },
   {
     "name": "Dor Beetle",
     "latin": "Anoplotrupes stercorosus",
-    "image": "res/bugs/dor_beetle.png",
+    "image": "res/bugs/dor_beetle.avif",
     "tags": ["bug", "forest"],
     "identification": 5
   },
   {
     "name": "Arran Brown",
     "latin": "Erebia ligea",
-    "image": "res/bugs/arran_brown.png",
+    "image": "res/bugs/arran_brown.avif",
     "tags": ["bug", "forest"],
     "identification": 5
   },
   {
     "name": "White-Tailed Bumblebee",
     "latin": "Bombus lucorum",
-    "image": "res/bugs/white_tailed_bumblebee.png",
+    "image": "res/bugs/white_tailed_bumblebee.avif",
     "tags": ["bug", "forest"],
     "identification": 5
   },
   {
     "name": "Black Garden Ant",
     "latin": "Lasius niger",
-    "image": "res/bugs/black_garden_ant.png",
+    "image": "res/bugs/black_garden_ant.avif",
     "tags": ["bug", "city"],
     "identification": 5
   },
   {
     "name": "Dark Carrion Beetle (larvae)",
     "latin": "Aclypea opaca",
-    "image": "res/bugs/dark_carrion_beetle_larvae.png",
+    "image": "res/bugs/dark_carrion_beetle_larvae.avif",
     "tags": ["bug", "park"],
     "identification": 5
   },
   {
     "name": "Housefly",
     "latin": "Musca domestica",
-    "image": "res/bugs/housefly.png",
+    "image": "res/bugs/housefly.avif",
     "tags": ["bug", "city"],
     "identification": 5
   },
   {
     "name": "Barred Marble",
     "latin": "Celypha striana",
-    "image": "res/bugs/barred_marble.png",
+    "image": "res/bugs/barred_marble.avif",
     "tags": ["bug", "city"],
     "identification": 4
   },
   {
     "name": "Ten-Spotted Ladybug (larvae)",
     "latin": "Adalia decempunctata",
-    "image": "res/bugs/ten_spotted_ladybug_larvae.png",
+    "image": "res/bugs/ten_spotted_ladybug_larvae.avif",
     "tags": ["bug", "city"],
     "identification": 4
   },
   {
     "name": "Seven-Spotted Ladybug",
     "latin": "Adalia decempunctata",
-    "image": "res/bugs/seven_spotted_ladybug.png",
+    "image": "res/bugs/seven_spotted_ladybug.avif",
     "tags": ["bug", "park"],
     "identification": 5
   },
   {
     "name": "Summer Chafer",
     "latin": "Amphimallon solstitiale",
-    "image": "res/bugs/summer_chafer.png",
+    "image": "res/bugs/summer_chafer.avif",
     "tags": ["bug", "city"],
     "identification": 5
   },
   {
     "name": "Common House Mosquito",
     "latin": "Culex pipens",
-    "image": "res/bugs/common_house_mosquito.png",
+    "image": "res/bugs/common_house_mosquito.avif",
     "tags": ["bug", "city"],
     "identification": 4
   },
   {
     "name": "Common Pill-Bug",
     "latin": "Armadillidium vulgare",
-    "image": "res/bugs/common_pill_bug.png",
+    "image": "res/bugs/common_pill_bug.avif",
     "tags": ["bug", "city"],
     "identification": 4
   },
   {
     "name": "Birch Sawfly (larvae)",
     "latin": "Cimbex femoratus",
-    "image": "res/bugs/birch_sawfly_larvae.png",
+    "image": "res/bugs/birch_sawfly_larvae.avif",
     "tags": ["bug", "forest"],
     "identification": 5
   },
   {
     "name": "European Hedgehog",
     "latin": "Erinaceus europaeus",
-    "image": "res/bugs/european_hedgehog.png",
+    "image": "res/bugs/european_hedgehog.avif",
     "tags": ["not_bug", "park"],
     "identification": 5
   },
   {
     "name": "Lesser Vespillo Burying Beetle",
     "latin": "Nicrophorus vespilloides",
-    "image": "res/bugs/lesser_vespillo_burying_beetle.png",
+    "image": "res/bugs/lesser_vespillo_burying_beetle.avif",
     "tags": ["bug", "forest"],
     "identification": 5
   },
   {
     "name": "European Harvestman",
     "latin": "Phalangium opilio",
-    "image": "res/bugs/european_harvestman.png",
+    "image": "res/bugs/european_harvestman.avif",
     "tags": ["spider", "forest"],
     "identification": 5
   },
   {
     "name": "Lichen Running Spider",
     "latin": "Philodromus margaritatus",
-    "image": "res/bugs/lichen_running_spider.png",
+    "image": "res/bugs/lichen_running_spider.avif",
     "tags": ["spider", "forest"],
     "identification": 4
   },
   {
     "name": "Larger Pale-Tipped Black Moth",
     "latin": "Amphipyra perflua",
-    "image": "res/bugs/larger_pale_tipped_black_moth.png",
+    "image": "res/bugs/larger_pale_tipped_black_moth.avif",
     "tags": ["bug", "city"],
     "identification": 4
   },
   {
     "name": "Red Squirrel",
     "latin": "Sciurus vulgaris",
-    "image": "res/bugs/red_squirrel.png",
+    "image": "res/bugs/red_squirrel.avif",
     "tags": ["not_bug", "park"],
     "identification": 5
   },
   {
     "name": "Flower Bug",
     "latin": "Anthocoris nemoralis",
-    "image": "res/bugs/flower_bug.png",
+    "image": "res/bugs/flower_bug.avif",
     "tags": ["not_bug", "forest"],
     "identification": 4
   }
