@@ -192,7 +192,7 @@
     "name": "Flower Bug",
     "latin": "Anthocoris nemoralis",
     "image": "res/bugs/flower_bug.avif",
-    "tags": ["not_bug", "forest"],
+    "tags": ["bug", "forest"],
     "identification": 4
   }
 ]
