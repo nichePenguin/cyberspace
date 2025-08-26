@@ -89,7 +89,7 @@ function updateDraws(newElements) {
 
   let container = document.querySelector("#history-container");
   if (container.children.length != 0) {
-    for (var i = 0; i < newElements.length; i++) {
+    for (var i = 0; i < container.children.length - 10 + newElements.length; i++) {
       let child = container.children[container.children.length - 1 - i];
       child.style.opacity = 0.0;
       setTimeout(() => {
