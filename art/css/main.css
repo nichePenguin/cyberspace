@@ -87,7 +87,7 @@ html, body {
 
 .scroller {
   overflow: auto;
-  padding: 20px;
+  padding: 5px;
   background-color: #000000;
 }
 
@@ -95,12 +95,12 @@ html, body {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: auto;
-  -webkit-column-gap: 3px;
-  -moz-column-gap: 3px;
-  column-gap: 3px;
-  -webkit-column-width: 500px;
-  -moz-column-width: 500px;
-  column-width: 500px;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+  -webkit-column-width: 450px;
+  -moz-column-width: 450px;
+  column-width: 450px;
 }
 
 .masonry-item {
