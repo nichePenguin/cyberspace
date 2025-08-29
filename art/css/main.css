@@ -95,9 +95,9 @@ html, body {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: auto;
-  -webkit-column-gap: 15px;
-  -moz-column-gap: 15px;
-  column-gap: 15px;
+  -webkit-column-gap: 3px;
+  -moz-column-gap: 3px;
+  column-gap: 3px;
   -webkit-column-width: 500px;
   -moz-column-width: 500px;
   column-width: 500px;
