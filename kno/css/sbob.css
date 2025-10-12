@@ -51,7 +51,7 @@ html, body {
   aspect-ratio: 1 / 1;
 }
 
-.back {
+.rounded {
   display: inline-block;
   padding:4px 8px 4px 8px;
   background: #DDFFDD;
@@ -61,12 +61,21 @@ html, body {
   left: 1rem;
 }
 
+.rounded-bottom {
+  display: inline-block;
+  padding:4px 8px 4px 8px;
+  background: #DDFFDD;
+  border-radius: 16px;
+  position: relative;
+  bottom: 1rem;
+}
+
 .subtitle {
   display: inline-block;
   position: relative;
   font-style: italic;
   top: -3rem;
-  left: 165px;
+  left: 20px;
 }
 
 .titlebar div {
@@ -91,6 +100,22 @@ html, body {
   background: #ffffff;
   border-bottom: 1px solid rgba(255,255,255,0.06);
   box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.footer div {
+  max-height: 2rem;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 2px -12px rgba(0,0,0,0.25);
 }
 
 .scroller {

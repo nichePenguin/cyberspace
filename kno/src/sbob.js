@@ -1,5 +1,5 @@
 var curr_page = 0;
-var item_per_page = 50;
+var items_per_page = 50;
 var filter = {
   "contains": "",
 }
@@ -9,6 +9,7 @@ var last_tags = "";
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('only-bugs').addEventListener('change', handleTagChange);
   document.getElementById('no-spiders').addEventListener('change', handleTagChange);
+  document.getElementById('include-cats').addEventListener('change', handleTagChange);
   document.getElementById('searchbar').addEventListener('input', handleSearchbarInput);
   handleTagChange(null);
 });
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleTagChange(event) {
   const only_bugs = document.getElementById('only-bugs').checked;
   const no_spiders = document.getElementById('no-spiders').checked;
+  const include_cats = document.getElementById('include-cats').checked;
   if (only_bugs) {
     filter["tags"] = [
       "bug"
@@ -30,6 +32,9 @@ function handleTagChange(event) {
         "bug", "not_bug", "spider"
       ]
     }
+  }
+  if (include_cats) {
+    filter["tags"].push("mrow")
   }
   const curr_tags = filter["tags"].sort().join(',');
   if (curr_tags != last_tags) {
@@ -51,7 +56,7 @@ function handleSearchbarInput(event) {
 function loadBugs() {
   const data = JSON.stringify({
     "page": curr_page,
-    "items_per_page": item_per_page ,
+    "items_per_page": items_per_page ,
     "filter": filter
   });
   fetch("https://pub.colonq.computer/~nichepenguin/cgi-bin/bug-fetch", {
@@ -81,7 +86,7 @@ function load(json) {
   const grid = document.querySelector('.grid');
   grid.innerHTML = '';
   for (var i = 0; i < json.length; i ++) {
-    const entry = json[i];
+    const entry = json["items"][i];
     const el = document.createElement('div');
     el.className = 'item';
     el.innerHTML = item(entry.name, entry.latin, entry.image);
