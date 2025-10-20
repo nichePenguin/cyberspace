@@ -85,7 +85,7 @@ function load(json) {
   if (!json) return;
   const grid = document.querySelector('.grid');
   grid.innerHTML = '';
-  for (var i = 0; i < json.length["items"]; i ++) {
+  for (var i = 0; i < json["items"].length; i ++) {
     const entry = json["items"][i];
     const el = document.createElement('div');
     el.className = 'item';
