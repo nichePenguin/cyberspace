@@ -62,12 +62,26 @@ html, body {
 }
 
 .rounded-bottom {
+  font-size: 1.5rem;
   display: inline-block;
   padding:4px 8px 4px 8px;
   background: #DDFFDD;
   border-radius: 16px;
   position: relative;
-  bottom: 1rem;
+  bottom: 0.75rem;
+}
+
+button:hover {
+  color: #66DD66;
+  background-color: #EEFFEE;
+}
+
+button {
+  font-size: 1.5rem;
+  color: #33AA33;
+  border: none;
+  background-color: #DDFFDD;
+  cursor: pointer;
 }
 
 .subtitle {
@@ -103,7 +117,7 @@ html, body {
 }
 
 .footer div {
-  max-height: 2rem;
+  max-height: 4rem;
 }
 
 .footer {
@@ -132,15 +146,52 @@ html, body {
 .item {
   background: #CCFFCC;
   border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
   aspect-ratio: 1 / 1.29;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  border-radius: 16px;
   display: grid;
   place-items: center;
   text-align: center;
   padding: 10px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  z-index: 1;
 }
 
 .item small {
   color: #96a2b3; 
+}
+
+.item-wrap {
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  position: relative;
+  perspective: 800px;
+}
+
+.depth1 {
+  transform: translateZ(-40px) scale(1.02);
+}
+
+.depth2 {
+  transform: translateZ(-20px) scale(1.02);
+}
+
+.depth {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  background: #228822;
+  opacity: 0;
+  z-index: -1;
+}
+
+.item-wrap:hover {
+  z-index: 5;
+}
+
+.item-wrap:hover .depth {
+  opacity: 1;
 }

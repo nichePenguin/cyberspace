@@ -20,9 +20,9 @@
           <textarea id="searchbar" rows="1"></textarea>
         </div>
         <div class="filters">
-          <input id="only-bugs" checked="true" type="checkbox">Only Bugs</input>
-          <input id="no-spiders" checked="true" type="checkbox">No Spiders</input>
-          <input id="include-cats" checked="true" type="checkbox">Include Cats (Cats are bugs)</input>
+          <input id="only-bugs" checked="true" type="checkbox"><label for="only-bugs">Only Bugs</label>
+          <input id="no-spiders" checked="true" type="checkbox"><label for="no-spiders">No Spiders</label>
+            <input id="include-cats" checked="true" type="checkbox"><label for ="include-cats">Include Cats (Cats are bugs)</label>
         </div>
       </div>
     </div>
@@ -32,16 +32,18 @@
       </div>
     </div>
 
-    <!--div class="footer">
+    <div class="footer" id="footer" style="display: none;">
       <div>
-        <p class="rounded-bottom" id="page-minus"><a href="?page=-1"> &#60;= </a></p>
-        <p class="rounded-bottom" id="page-prev"><a href="?page=0">4</a></p>
-        <p class="rounded-bottom" id="page-curr">5</p>
-        <p class="rounded-bottom" id="page-next"><a href="?page=2">6</a></p>
-        <p class="rounded-bottom" id="page-plus"><a href="?page=3"> =&#62; </a></p>
+        <p class="rounded-bottom" id="page-first" ><button type="button" id="first">1</button></p>
+        <p class="rounded-bottom" id="page-more-left" > ... </p>
+        <p class="rounded-bottom" id="page-prev" ><button type="button" id="prev">4</button></p>
+        <p class="rounded-bottom" id="page-curr">1</p>
+        <p class="rounded-bottom" id="page-next" ><button type="button" id="next">6</button></p>
+        <p class="rounded-bottom" id="page-more-right" > ... </p>
+        <p class="rounded-bottom" id="page-last" ><button type="button" id="last">12</button></p>
       </div>
     </div>
-  </div-->
+  </div>
 
 </body>
 </html>
