@@ -3,7 +3,7 @@
     "name": "Italian small wood-scorpion",
     "latin": "Euscorpius italicus",
     "image": "res/bugs/italian_small_wood_scorpion.avif",
-    "tags": ["not_bug", "spider"],
+    "tags": ["spider"],
     "identification": 4,
     "by": "slowpvke",
     "at": "2025-10-24 15:54:51"
@@ -27,7 +27,7 @@
     "name": "Muffy",
     "latin": "Felis catus",
     "image": "res/bugs/muffy.avif",
-    "tags": ["not_bug", "mrow"],
+    "tags": ["mrow"],
     "identification": 5,
     "by": "toppocatto",
     "at": "2025-10-21 22:52:05"
@@ -91,7 +91,7 @@
     "name": "Ada",
     "latin": "Felis catus",
     "image": "res/bugs/ada.avif",
-    "tags": ["not_bug", "mrow"],
+    "tags": ["mrow"],
     "identification": 5,
     "by": "pwfff",
     "at": "2025-10-21 19:33:27"
@@ -115,7 +115,7 @@
     "name": "Smudge",
     "latin": "Felis catus",
     "image": "res/bugs/asq_cat_1.avif",
-    "tags": ["not_bug", "mrow"],
+    "tags": ["mrow"],
     "identification": 5,
     "by": "asquared31415",
     "at": "2025-10-21 19:09:37"
@@ -123,7 +123,7 @@
     "name": "Scared Cat",
     "latin": "Felis catus",
     "image": "res/bugs/krzysckhs_cat.avif",
-    "tags": ["not_bug", "mrow"],
+    "tags": ["mrow"],
     "identification": 5,
     "by": "krzysckh",
     "at": "2025-10-21 19:03:03"

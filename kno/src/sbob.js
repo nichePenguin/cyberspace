@@ -170,14 +170,18 @@ function load(json) {
     el.setAttribute('index', i)
     el.addEventListener('mousemove', handleItemHover);
     el.addEventListener('mouseleave', handleItemMouseLeave);
-    el.innerHTML = item(entry.name, entry.latin, entry.image, bug_width);
+    let by = entry.by;
+    if (!by) {
+      by = 'nichePenguin'
+    }
+    el.innerHTML = item(entry.name, entry.latin, entry.image, bug_width, by);
     grid.appendChild(el);
   }
   adjustPageControl()
   bugs_loading = false
 }
 
-function item(name, latin, image, width) {
+function item(name, latin, image, width, by) {
   return `<div class="depth depth1"></div>
           <div class="depth depth2"></div>
           <div class="item">
@@ -186,6 +190,8 @@ function item(name, latin, image, width) {
             <strong>${name}</strong>
             <br>
             <small>${latin}</small>
+            <br>
+            <span>by ${by}</span>
           </div>
           </div>
 `;
