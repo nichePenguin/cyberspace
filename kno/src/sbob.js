@@ -11,12 +11,14 @@ var last_tags = "";
 var bugs_loading = true;
 var last_bug_width = 472;
 
+var focuesed_item = null;
+var focused = false;
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('only-bugs').addEventListener('change', handleTagChange);
   document.getElementById('no-spiders').addEventListener('change', handleTagChange);
-  document.getElementById('include-cats').addEventListener('change', handleTagChange);
+  document.getElementById('exclude-cats').addEventListener('change', handleTagChange);
   document.getElementById('searchbar').addEventListener('input', handleSearchbarInput);
-  //document.querySelector('.grid').addEventListener('mouseover', handleItemHover);
   handleTagChange(null);
 });
 
@@ -34,7 +36,7 @@ function handleItemHover(event) {
 }
 
 function handlePageChange(event) {
-  if (bugs_loading) {
+  if (focused | bugs_loading) {
     return
   }
   bugs_loading = true
@@ -81,12 +83,16 @@ function adjustPageControl() {
 function handleTagChange(event) {
   const only_bugs = document.getElementById('only-bugs').checked;
   const no_spiders = document.getElementById('no-spiders').checked;
-  const include_cats = document.getElementById('include-cats').checked;
+  const exclude_cats = document.getElementById('exclude-cats').checked;
   if (only_bugs) {
     filter["tags"] = [
       "bug"
     ]
+    document.getElementById('spider-wrap').style.display = 'none'
+    document.getElementById('cat-wrap').style.display = 'none'
   } else {
+    document.getElementById('spider-wrap').style.display = 'inline'
+    document.getElementById('cat-wrap').style.display = 'inline'
     if (no_spiders) {
       filter["tags"] = [
         "bug", "not_bug"
@@ -96,9 +102,9 @@ function handleTagChange(event) {
         "bug", "not_bug", "spider"
       ]
     }
-  }
-  if (include_cats) {
-    filter["tags"].push("mrow")
+    if (!exclude_cats) {
+      filter["tags"].push("mrow")
+    }
   }
   const curr_tags = filter["tags"].sort().join(',');
   if (curr_tags != last_tags) {

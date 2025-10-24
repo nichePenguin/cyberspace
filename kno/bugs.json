@@ -1,5 +1,169 @@
 [
   {
+    "name": "Italian small wood-scorpion",
+    "latin": "Euscorpius italicus",
+    "image": "res/bugs/italian_small_wood_scorpion.avif",
+    "tags": ["not_bug", "spider"],
+    "identification": 4,
+    "by": "slowpvke",
+    "at": "2025-10-24 15:54:51"
+  },{
+    "name": "Torpedo Bug",
+    "latin": "Siphanta acuta",
+    "image": "res/bugs/torpedo_bug.avif",
+    "tags": ["bug"],
+    "identification": 5,
+    "by": "yongestation",
+    "at": "2025-10-23 09:36:38"
+  },{
+    "name": "Grey Comma",
+    "latin": "Polygonia progne",
+    "image": "res/bugs/grey_comma.avif",
+    "tags": ["bug"],
+    "identification": 4,
+    "by": "foggyroses",
+    "at": "2025-10-21 23:02:04"
+  },{
+    "name": "Muffy",
+    "latin": "Felis catus",
+    "image": "res/bugs/muffy.avif",
+    "tags": ["not_bug", "mrow"],
+    "identification": 5,
+    "by": "toppocatto",
+    "at": "2025-10-21 22:52:05"
+  },{
+    "name": "Spotted Lanternfly",
+    "latin": "Lycorma delicatula",
+    "image": "res/bugs/spotted_lanternfly.avif",
+    "tags": ["bug"],
+    "identification": 5,
+    "by": "pwfff",
+    "at": "2025-10-21 21:50:48"
+  },{
+    "name": "Oriental Beetle",
+    "latin": "Anomala orientalis",
+    "image": "res/bugs/oriental_beetle.avif",
+    "tags": ["bug"],
+    "identification": 5,
+    "by": "asquared31415",
+    "at": "2025-10-21 21:01:00"
+  },{
+    "name": "Long-winged Conehead ",
+    "latin": "Conocephalus fuscus",
+    "image": "res/bugs/long_winged_conehead.avif",
+    "tags": ["bug"],
+    "identification": 4,
+    "by": "asquared31415",
+    "at": "2025-10-21 20:50:21"
+  },{
+    "name": "Common Grasshopper",
+    "latin": "Chorthippus brunneus",
+    "image": "res/bugs/common_grasshopper.avif",
+    "tags": ["bug"],
+    "identification": 1,
+    "by": "asquared31415",
+    "at": "2025-10-21 20:45:14"
+  },{
+    "name": "Horseshoe Crab",
+    "latin": "Carcinoscorpius rotundicauda",
+    "image": "res/bugs/horseshoe_crab.avif",
+    "tags": ["not_bug"],
+    "identification": 4,
+    "by": "asquared31415",
+    "at": "2025-10-21 20:33:20"
+  },{
+    "name": "Common Eastern Bumblebee",
+    "latin": "Bombus impatiens",
+    "image": "res/bugs/common_eastern_bumblebee.avif",
+    "tags": ["bug"],
+    "identification": 3,
+    "by": "asquared31415",
+    "at": "2025-10-21 20:22:43"
+  },{
+    "name": "Black Swallowtail",
+    "latin": "Papilio polyxenes",
+    "image": "res/bugs/black_swallowtail.avif",
+    "tags": ["bug"],
+    "identification": 4,
+    "by": "asquared31415",
+    "at": "2025-10-21 20:11:46"
+  },{
+    "name": "Ada",
+    "latin": "Felis catus",
+    "image": "res/bugs/ada.avif",
+    "tags": ["not_bug", "mrow"],
+    "identification": 5,
+    "by": "pwfff",
+    "at": "2025-10-21 19:33:27"
+  },{
+    "name": "South American Monarch Butterfly (caterpillar)",
+    "latin": "Danaus erippus ",
+    "image": "res/bugs/south_american_monarch_butterfly_caterpillar.avif",
+    "tags": ["bug"],
+    "identification": 5,
+    "by": "ctrl_o",
+    "at": "2025-10-21 19:25:30"
+  },{
+    "name": "Ullrichs Ground Beetle",
+    "latin": "Carabus ulrichii",
+    "image": "res/bugs/ullrichs_ground_beetle.avif",
+    "tags": ["bug"],
+    "identification": 4,
+    "by": "PippinFool",
+    "at": "2025-10-21 19:09:41"
+  },  {
+    "name": "Smudge",
+    "latin": "Felis catus",
+    "image": "res/bugs/asq_cat_1.avif",
+    "tags": ["not_bug", "mrow"],
+    "identification": 5,
+    "by": "asquared31415",
+    "at": "2025-10-21 19:09:37"
+  },  {
+    "name": "Scared Cat",
+    "latin": "Felis catus",
+    "image": "res/bugs/krzysckhs_cat.avif",
+    "tags": ["not_bug", "mrow"],
+    "identification": 5,
+    "by": "krzysckh",
+    "at": "2025-10-21 19:03:03"
+  },
+  {
+    "name": "Common Carder Bee",
+    "latin": "Bombus pascuorum",
+    "image": "res/bugs/.avif",
+    "tags": ["bug"],
+    "identification": 2,
+    "by": "XorXavier",
+    "at": "2025-10-21 18:53:27"
+  },
+  {
+    "name": "Underwing Moth",
+    "latin": "Catocala adultera",
+    "image": "res/bugs/underwing_moth.avif",
+    "tags": ["bug"],
+    "identification": 2,
+    "by": "krzysckh",
+    "at": "2025-10-20 19:31:22"
+  },  {
+    "name": "Fire Salamander",
+    "latin": "Salamandra salamandra",
+    "image": "res/bugs/fire_salamander.avif",
+    "tags": ["not_bug"],
+    "identification": 5,
+    "by": "krzysckh",
+    "at": "2025-10-20 19:18:38"
+  },
+  {
+    "name": "Szczotecznica szarawka",
+    "latin": "Calliteara pudibunda",
+    "image": "res/bugs/szczotecznica_szarawka.avif",
+    "tags": ["bug"],
+    "identification": 3,
+    "by": "krzysckh",
+    "at": "2025-10-20 18:53:32"
+  },
+  {
     "name": "Red-brown Longhorn Beetle",
     "latin": "Stictoleptura rubra",
     "image": "res/bugs/red_brown_longhorn_beetle.avif",
