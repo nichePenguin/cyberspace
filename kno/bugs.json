@@ -131,7 +131,7 @@
   {
     "name": "Common Carder Bee",
     "latin": "Bombus pascuorum",
-    "image": "res/bugs/.avif",
+    "image": "res/bugs/common_carder_bee.avif",
     "tags": ["bug"],
     "identification": 2,
     "by": "XorXavier",
