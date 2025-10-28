@@ -1,5 +1,14 @@
 [
   {
+    "name": "Sir Laura",
+    "latin": "Felis catus",
+    "image": "res/bugs/sir_laura.avif",
+    "tags": ["mrow"],
+    "identification": 5,
+    "by": "toppocatto",
+    "at": "2025-10-28 20:19:38"
+  },
+  {
     "name": "Italian small wood-scorpion",
     "latin": "Euscorpius italicus",
     "image": "res/bugs/italian_small_wood_scorpion.avif",
