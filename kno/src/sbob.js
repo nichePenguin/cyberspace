@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('no-spiders').addEventListener('change', handleTagChange);
   document.getElementById('exclude-cats').addEventListener('change', handleTagChange);
   document.getElementById('searchbar').addEventListener('input', handleSearchbarInput);
+
+  document.getElementById('first').addEventListener('click', handlePageChange);
+  document.getElementById('prev').addEventListener('click', handlePageChange);
+  document.getElementById('next').addEventListener('click', handlePageChange);
+  document.getElementById('last').addEventListener('click', handlePageChange);
+
   handleTagChange(null);
 });
 
@@ -40,7 +46,7 @@ function handlePageChange(event) {
     return
   }
   bugs_loading = true
-  const page = Math.max(1, int(event.currentTarget.innerText))
+  const page = Math.max(1, parseInt(event.currentTarget.innerText))
   if (page == curr_page) {
     bugs_loading = false
     return;
@@ -58,21 +64,25 @@ function adjustPageControl() {
     pages_total = Math.ceil(items_total / items_per_page);
     document.getElementById('footer').style.display = '';
   }
+  const firstButton = document.getElementById('first')
   const first = document.getElementById('page-first')
   const left = document.getElementById('page-more-left')
   const prev = document.getElementById('page-prev')
+  const prevButton = document.getElementById('prev')
   const curr = document.getElementById('page-curr')
   const next = document.getElementById('page-next')
+  const nextButton = document.getElementById('next')
   const right = document.getElementById('page-more-right')
   const last = document.getElementById('page-last')
+  const lastButton = document.getElementById('last')
 
   left.style.display = (curr_page <= 3) ? 'none' : '';
-  first.style.display = (curr_page <= 2) ? 'none' : '';
-  prev.style.display = (curr_page <= 1) ? 'none' : '';
+  firstButton.style.display = (curr_page <= 2) ? 'none' : '';
+  prevButton.style.display = (curr_page <= 1) ? 'none' : '';
 
   right.style.display = (curr_page >= pages_total - 2) ? 'none' : '';
-  last.style.display = (curr_page >= pages_total - 1) ? 'none' : '';
-  next.style.display = (curr_page >= pages_total) ? 'none' : '';
+  lastButton.style.display = (curr_page >= pages_total - 1) ? 'none' : '';
+  nextButton.style.display = (curr_page >= pages_total) ? 'none' : '';
 
   prev.innerText = curr_page - 1
   curr.innerText = curr_page
