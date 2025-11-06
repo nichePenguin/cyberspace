@@ -135,6 +135,7 @@ button {
 .scroller {
   overflow: auto;
   padding: 20px;
+  padding-bottom: 78px;
 }
 
 .grid {
