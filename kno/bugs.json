@@ -1,5 +1,23 @@
 [
   {
+    "name": "Gray Cracker",
+    "latin": "Hamadryas februa",
+    "image": "res/bugs/gray_cracker.avif",
+    "tags": ["bug"],
+    "identification": 3,
+    "by": "rosieliz_",
+    "at": "2025-11-08 00:10:31"
+  },
+  {
+    "name": "Armyworm Moth",
+    "latin": "Spodoptera cosmioides",
+    "image": "res/bugs/armyworm_moth.avif",
+    "tags": ["bug"],
+    "identification": 2,
+    "by": "rosieliz_",
+    "at": "2025-11-08 00:07:29"
+  },
+  {
     "name": "Sir Laura",
     "latin": "Felis catus",
     "image": "res/bugs/sir_laura.avif",
