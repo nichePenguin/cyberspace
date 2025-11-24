@@ -1,5 +1,32 @@
 [
   {
+    "name": "Common Pill Woodlouse (w/ Invertebrate Iridescent virus)",
+    "latin": "Armadillidium Vulgare (w/ Iridovirus Armadillidium)",
+    "image": "res/bugs/common_pill_woodlouse_infected.avif",
+    "tags": ["bug"],
+    "identification": 5,
+    "by": "exceptionerroralex",
+    "at": "2025-11-20 02:21:25"
+  },
+  {
+    "name": "Volkswagen Beetle (1969)",
+    "latin": "Käferius Wolfsburgia",
+    "image": "res/bugs/volkswagen_beetle.avif",
+    "tags": ["not_bug"],
+    "identification": 5,
+    "by": "exceptionerroralex",
+    "at": "2025-11-20 02:09:59"
+  },
+  {
+    "name": "Barred Owl",
+    "latin": "Strix varia",
+    "image": "res/bugs/barred_owl.avif",
+    "tags": ["not_bug"],
+    "identification": 5,
+    "by": "Colinahscopy_",
+    "at": "2025-11-20 02:06:20"
+  },
+  {
     "name": "Gray Cracker",
     "latin": "Hamadryas februa",
     "image": "res/bugs/gray_cracker.avif",
