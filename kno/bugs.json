@@ -1,7 +1,25 @@
 [
   {
+    "name": "Quirkus",
+    "latin": "Felis catus",
+    "image": "res/bugs/quirkus.avif",
+    "tags": ["mrow"],
+    "identification": 5,
+    "by": "Toppocatto",
+    "at": "2025-12-04 22:13:38"
+  },
+  {
+    "name": "Spotted Lanternfly",
+    "latin": "Lycorma delicatula",
+    "image": "res/bugs/spotted_lanternfly_2.avif",
+    "tags": ["bug"],
+    "identification": 2,
+    "by": "XorXavier",
+    "at": "2025-11-28 22:17:02"
+  },
+  {
     "name": "Common Pill Woodlouse",
-    "latin": "Armadillidium Vulgare (w/ Iridovirus Armadillidium)",
+    "latin": "Armadillidium bulgare (w/ Iridovirus armadillidium)",
     "image": "res/bugs/common_pill_woodlouse_infected.avif",
     "tags": ["bug"],
     "identification": 5,
@@ -10,7 +28,7 @@
   },
   {
     "name": "Volkswagen Beetle (1969)",
-    "latin": "Käferius Wolfsburgia",
+    "latin": "Käferius wolfsburgia",
     "image": "res/bugs/volkswagen_beetle.avif",
     "tags": ["not_bug"],
     "identification": 5,
@@ -86,8 +104,8 @@
     "by": "toppocatto",
     "at": "2025-10-21 22:52:05"
   },{
-    "name": "Spotted Lanternfly",
-    "latin": "Lycorma delicatula",
+    "name": "Spotted Lanternfly (w/ Dog)",
+    "latin": "Lycorma delicatula (w/ Canis familiaris)",
     "image": "res/bugs/spotted_lanternfly.avif",
     "tags": ["bug"],
     "identification": 5,
