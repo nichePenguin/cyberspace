@@ -1,8 +1,8 @@
 [
   {
-    "name": "Quirkus",
+    "name": "Quircus",
     "latin": "Felis catus",
-    "image": "res/bugs/quirkus.avif",
+    "image": "res/bugs/quircus.avif",
     "tags": ["mrow"],
     "identification": 5,
     "by": "Toppocatto",
